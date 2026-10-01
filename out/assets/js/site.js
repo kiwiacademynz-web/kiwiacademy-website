@@ -154,11 +154,30 @@
     });
   }
 
+  function wireSectionReveals() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    var sections = document.querySelectorAll("main > .topo, main > .section, main > section, .cta-band");
+    if (!("IntersectionObserver" in window)) return;
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove("reveal-pending");
+        entry.target.classList.add("reveal-visible");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.08, rootMargin: "0px 0px -32px 0px" });
+    sections.forEach(function (section) {
+      section.classList.add("reveal-pending");
+      observer.observe(section);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     wireContactLinks();
     wireNav();
     wireChooser();
     wireChecker();
     wireForms();
+    wireSectionReveals();
   });
 })();

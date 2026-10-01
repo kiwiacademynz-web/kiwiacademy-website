@@ -213,6 +213,21 @@ HOME_METHOD = """<div class="topo section section--fiord">
 
 HOME_STORIES = ""
 
+HOME_METRICS = """<section class="section metrics-section" aria-labelledby="metrics-title">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">DreamVision impact</p>
+      <h2 id="metrics-title">Guidance trusted by students and professionals.</h2>
+    </div>
+    <dl class="metrics-grid">
+      <div class="metric"><dt>1500+</dt><dd>Satisfied customers</dd></div>
+      <div class="metric"><dt>250+</dt><dd>Student visas</dd></div>
+      <div class="metric"><dt>100+</dt><dd>Placements</dd></div>
+      <div class="metric"><dt>99.9%</dt><dd>Satisfaction</dd></div>
+    </dl>
+  </div>
+</section>"""
+
 HOME_SERVICES = """<section class="section home-services" id="services">
   <div class="wrap">
     <div class="section-head">
@@ -265,7 +280,7 @@ HOME_SERVICES = """<section class="section home-services" id="services">
   </div>
 </section>"""
 
-HOME_BODY = HOME_HERO + HOME_SERVICES + HOME_APPROACH
+HOME_BODY = HOME_HERO + HOME_METRICS + HOME_SERVICES + HOME_APPROACH
 
 page(
     "index.html",
