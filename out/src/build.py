@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Builds the static Kiwi Nurse Academy site into out/.
+Builds the static DreamVision Education site into out/.
 Plain HTML/CSS/JS output — this script is only a dev-time convenience
 so the header/footer/nav stay identical across every page.
 """
@@ -10,15 +10,15 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "out")
 
-SITE_NAME = "Kiwi Nurse Academy"
+SITE_NAME = "DREAMVISION EDUCATION"
 
 # ---------------------------------------------------------------- nav model
 NAV = [
     ("index.html", "Home", None),
-    ("courses/index.html", "Courses", [
-        ("courses/iqn-training.html", "IQN Training", "Pearson VUE theory exam prep"),
-        ("courses/osce-training.html", "OSCE Training", "Clinical stations, simulation lab"),
-        ("courses/oet-preparation.html", "OET Preparation", "All 4 sub-tests, NCNZ bands"),
+    ("courses/index.html", "Services", [
+      ("courses/iqn-training.html", "Nursing Registration", "New Zealand pathway guidance"),
+      ("courses/osce-training.html", "Clinical Preparation", "Simulation and exam readiness"),
+      ("courses/oet-preparation.html", "English Preparation", "OET and IELTS coaching"),
     ]),
     ("about.html", "About Us", None),
     ("blog.html", "Blog", None),
@@ -82,7 +82,7 @@ def head(title, desc, base, canonical):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<link rel="canonical" href="https://kiwinurseacademy.com/{canonical}">
+<link rel="canonical" href="https://dreamvisionedu.au/{canonical}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -91,7 +91,7 @@ def head(title, desc, base, canonical):
 <link rel="icon" href="{base}assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{base}assets/css/style.css">
 </head>
 <body>
@@ -102,22 +102,22 @@ def head(title, desc, base, canonical):
 def header(base, current):
     return """<header class="topbar">
   <div class="wrap">
-    <span class="topbar__tagline">Kerala &amp; Aotearoa New Zealand &middot; Registered-nurse pathway specialists</span>
+    <span class="topbar__tagline">Guiding Dreams, Building Global Futures</span>
     <div class="topbar__links">
-      <a data-tel data-tel-text href="#">+91 00000 00000</a>
-      <a data-email data-email-text href="#">info@kiwinurseacademy.com</a>
+      <a data-tel data-tel-text href="#">+91 81578 19376</a>
+      <a data-email data-email-text href="#">info@dreamvisionedu.au</a>
     </div>
   </div>
 </header>
 <div class="site-header">
   <div class="wrap">
     <a class="brand" href="{base}index.html">
-      <span class="brand__mark">{kiwi}</span>
-      <span>Kiwi Nurse Academy<small>IQN &middot; OSCE &middot; OET training</small></span>
+      <span class="brand__mark">D</span>
+      <span>DREAMVISION<small>EDUCATION</small></span>
     </a>
     <nav class="nav" aria-label="Primary">
       {nav}
-      <a class="btn btn--kowhai btn--small" data-wa href="#">{wa} WhatsApp Us</a>
+      <a class="btn btn--kowhai btn--small" data-wa href="#">{wa} Connect with us</a>
     </nav>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open menu">{menu}</button>
   </div>
@@ -131,12 +131,12 @@ def footer(base):
     return """<div class="cta-band">
   <div class="wrap cta-band__grid">
     <div>
-      <h2>Ready to start your New Zealand nursing journey?</h2>
-      <p>Book a free 20-minute pathway call. We'll tell you honestly what stage you're at and what to do next &mdash; no obligation.</p>
+      <h2>Your next chapter can start with one conversation.</h2>
+      <p>Talk with our team about study, work, nursing registration or preparing for life abroad.</p>
     </div>
     <div class="btn-row">
-      <a class="btn btn--kowhai" data-wa href="#">{wa} Chat on WhatsApp</a>
-      <a class="btn btn--ghost" href="{base}contact.html">Book a free call</a>
+      <a class="btn btn--kowhai" data-wa href="#">{wa} Connect with us</a>
+      <a class="btn btn--ghost" href="{base}contact.html">Contact DreamVision</a>
     </div>
   </div>
 </div>
@@ -144,10 +144,10 @@ def footer(base):
   <div class="wrap footer__grid">
     <div>
       <a class="brand" href="{base}index.html">
-        <span class="brand__mark">{kiwi}</span>
-        <span>Kiwi Nurse Academy</span>
+        <span class="brand__mark">D</span>
+        <span>DREAMVISION EDUCATION</span>
       </a>
-      <p class="footer__about">Kerala-based training centre preparing internationally qualified nurses for IQN, OSCE and OET, with a support team in New Zealand.</p>
+      <p class="footer__about">Education, career and arrival guidance for students and professionals planning their next step abroad.</p>
       <div class="social">
         <a data-social="instagram" href="#" aria-label="Instagram">{insta}</a>
         <a data-social="facebook" href="#" aria-label="Facebook">{fb}</a>
@@ -156,7 +156,7 @@ def footer(base):
       </div>
     </div>
     <div>
-      <h4>Courses</h4>
+      <h4>Services</h4>
       <ul>
         <li><a href="{base}courses/iqn-training.html">IQN Training</a></li>
         <li><a href="{base}courses/osce-training.html">OSCE Training</a></li>
@@ -165,7 +165,7 @@ def footer(base):
       </ul>
     </div>
     <div>
-      <h4>Company</h4>
+      <h4>Explore</h4>
       <ul>
         <li><a href="{base}about.html">About us</a></li>
         <li><a href="{base}career.html">Careers</a></li>
@@ -177,17 +177,18 @@ def footer(base):
     <div>
       <h4>Get in touch</h4>
       <ul>
-        <li>{pin} <span data-addr-india>Add your India centre address, City, Kerala</span></li>
-        <li>{phone} <a data-tel data-tel-text href="#">+91 00000 00000</a></li>
-        <li>{mail} <a data-email data-email-text href="#">info@kiwinurseacademy.com</a></li>
+        <li>{pin} <span data-addr-india>First Floor, Jacob Tower, Post Office Junction, Muvattupuzha, Kerala 686661</span></li>
+        <li>{phone} <a data-tel data-tel-text href="#">+91 81578 19376</a></li>
+        <li>{mail} <a data-email data-email-text href="#">info@dreamvisionedu.au</a></li>
+        <li>{pin} <span data-addr-nz>Sandown Road, Launceston, Tasmania, Australia</span></li>
         <li>{clock} <span data-hours>Mon &ndash; Sat, 9:00 am &ndash; 6:00 pm IST</span></li>
       </ul>
     </div>
   </div>
   <div class="wrap footer__legal">
-    <p>Kiwi Nurse Academy is an exam-preparation and training provider. We are not the Nursing Council of New Zealand (NCNZ), Pearson VUE, Cambridge Boxhill Language Assessment (OET), or IDP/British Council (IELTS), and we do not set or guarantee exam outcomes. Fees, syllabi and requirements shown on this site are correct to the best of our knowledge and should be confirmed on the relevant official website before you rely on them.</p>
+    <p>DreamVision Education provides education and career guidance. Immigration advice and visa decisions should be confirmed with the relevant government authority or a licensed immigration adviser. Course requirements and policies can change; please confirm details with the relevant institution or registration body.</p>
     <div class="footer__bottom">
-      <span>&copy; <span id="y"></span> Kiwi Nurse Academy. All rights reserved.</span>
+      <span>&copy; <span id="y"></span> DreamVision Education. All rights reserved.</span>
       <ul><li><a href="{base}contact.html">Privacy</a></li><li><a href="{base}contact.html">Terms</a></li></ul>
     </div>
   </div>

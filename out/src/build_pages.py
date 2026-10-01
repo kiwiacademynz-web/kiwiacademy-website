@@ -52,23 +52,23 @@ TRAIL_SVG = """
 HOME_HERO = """<div class="topo hero">
   <div class="wrap hero__grid">
     <div>
-      <h1>The route from Kerala to a registered-nurse role in New Zealand.</h1>
-      <p class="lead">Kiwi Nurse Academy trains internationally qualified nurses for the three exams the Nursing Council of New Zealand actually asks for: OET or IELTS, the IQN theoretical exam, and the OSCE. One centre, one plan, no guesswork about what comes next.</p>
+      <h1>Make your next chapter a global one.</h1>
+      <p class="lead">Study, work and build your future across New Zealand, Australia and the UK, with thoughtful guidance from your first conversation through arrival.</p>
       <ul class="hero__proof">
-        <li>{c1} Coaching built around NCNZ's current three-step competence pathway, not the old paperwork-only process</li>
-        <li>{c2} OSCE simulation practice on the same station format used at Nurse Maude, Christchurch</li>
-        <li>{c3} Small batches, so every candidate gets corrected speaking and writing practice, not just recordings</li>
+        <li>{c1} Personal guidance for study and career pathways abroad</li>
+        <li>{c2} Support with planning, applications and pre-arrival preparation</li>
+        <li>{c3} Clear next steps shaped around your goals and destination</li>
       </ul>
       <div class="btn-row">
-        <a class="btn btn--kowhai" data-wa href="#">{wa} Talk to a counsellor</a>
-        <a class="btn btn--ghost" href="courses/index.html">See all courses</a>
+        <a class="btn btn--kowhai" data-wa href="#">{wa} Connect with us</a>
+        <a class="btn btn--ghost" href="#services">Explore our services</a>
       </div>
     </div>
     <div class="trail" aria-hidden="false">
       {trail}
       <div class="trail__legend">
-        <span><i class="k"></i> Trained at Kiwi Nurse Academy</span>
-        <span><i></i> Milestone you reach</span>
+        <span><i class="k"></i> Your goals, clearly mapped</span>
+        <span><i></i> Support at every step</span>
       </div>
     </div>
   </div>
@@ -211,35 +211,47 @@ HOME_METHOD = """<div class="topo section section--fiord">
   </div>
 </div>"""
 
-HOME_STORIES = """<div class="section">
+HOME_STORIES = ""
+
+HOME_SERVICES = """<section class="section home-services" id="services">
   <div class="wrap">
     <div class="section-head">
-      <h2>What candidates say</h2>
-      <p>Real stories from our students are being collected as the first batches complete their exams &mdash; check back soon, or ask us to connect you directly with a recent graduate.</p>
+      <p class="eyebrow">Our services</p>
+      <h2>One trusted guide. A world of possibilities.</h2>
+      <p>Whether you're planning to study, work or settle into a new destination, we'll help you understand the options and move forward with confidence.</p>
     </div>
-    <div class="stories">
-      <div class="story">
-        <blockquote>&ldquo;Add your first testimonial here once a candidate agrees to be featured &mdash; keep it specific: which exam, what score, what changed.&rdquo;</blockquote>
-        <div class="story__who"><span class="avatar">?</span><span><b>Candidate name</b>IQN &middot; batch month/year</span></div>
-      </div>
-      <div class="story">
-        <blockquote>&ldquo;A second testimonial slot &mdash; OSCE candidates responding well to simulation-lab practice is a strong story to capture early.&rdquo;</blockquote>
-        <div class="story__who"><span class="avatar">?</span><span><b>Candidate name</b>OSCE &middot; batch month/year</span></div>
-      </div>
-      <div class="story">
-        <blockquote>&ldquo;A third slot for an OET success story &mdash; a before/after band score is the most persuasive detail you can include.&rdquo;</blockquote>
-        <div class="story__who"><span class="avatar">?</span><span><b>Candidate name</b>OET &middot; batch month/year</span></div>
-      </div>
+    <div class="service-grid">
+      <a class="service-card" href="contact.html"><span class="service-card__num">01</span><h3>Study in New Zealand</h3><p>Explore courses and education pathways that fit your plans, background and ambitions.</p><span class="service-card__link">Explore study options <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="contact.html"><span class="service-card__num">02</span><h3>Pre-arrival services</h3><p>Prepare for the move with practical guidance on travel, accommodation and settling in.</p><span class="service-card__link">Plan your arrival <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="courses/index.html"><span class="service-card__num">03</span><h3>NZ nursing registration</h3><p>Prepare for the English, theory and clinical assessment stages of the New Zealand pathway.</p><span class="service-card__link">Explore nursing preparation <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="contact.html"><span class="service-card__num">04</span><h3>UK, New Zealand &amp; Australia</h3><p>Compare international study and career directions with support tailored to your next step.</p><span class="service-card__link">Discuss destinations <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="contact.html"><span class="service-card__num">05</span><h3>Work in New Zealand</h3><p>Understand career pathways and the preparation involved in pursuing work opportunities.</p><span class="service-card__link">Talk through your plans <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="contact.html"><span class="service-card__num">06</span><h3>Work in Australia</h3><p>Get a clearer view of professional opportunities and practical next steps in Australia.</p><span class="service-card__link">Talk through your plans <span aria-hidden="true">&rarr;</span></span></a>
     </div>
   </div>
-</div>"""
+</section>
+<section class="section section--mist home-approach">
+  <div class="wrap split split--wide-left">
+    <div class="stack">
+      <p class="eyebrow">A more considered way forward</p>
+      <h2>Big decisions deserve clear guidance.</h2>
+      <p class="lead">Every international journey is different. We take time to understand where you are now, what you want to achieve and which next step makes sense.</p>
+      <a class="btn btn--jade" href="contact.html">Speak with DreamVision</a>
+    </div>
+    <dl class="approach-list">
+      <div><dt>Start with your goals</dt><dd>We listen first, then help you explore pathways relevant to your experience and plans.</dd></div>
+      <div><dt>Know what comes next</dt><dd>Get practical guidance on preparation, applications and the steps ahead.</dd></div>
+      <div><dt>Stay supported</dt><dd>From early planning to pre-arrival preparation, our team is here to help you keep moving.</dd></div>
+    </dl>
+  </div>
+</section>"""
 
-HOME_BODY = HOME_HERO + HOME_ROUTES + HOME_CHOOSER + HOME_METHOD + HOME_STORIES
+HOME_BODY = HOME_HERO + HOME_SERVICES + HOME_APPROACH
 
 page(
     "index.html",
-    "Kiwi Nurse Academy — IQN, OSCE & OET Training for New Zealand Registration",
-    "IQN theory, OSCE clinical and OET/IELTS training for internationally qualified nurses moving to New Zealand. Kerala-based classroom and simulation training.",
+    "DREAMVISION EDUCATION | Study, Work & Nursing Pathways Abroad",
+    "Explore study, work, pre-arrival and New Zealand nursing registration support with DreamVision Education in Kerala and Australia.",
     "index.html", "",
     HOME_BODY,
 )
@@ -320,8 +332,8 @@ COURSES_ORDER = """<div class="section section--mist">
 
 page(
     "courses/index.html",
-    "Courses — IQN, OSCE & OET Training | Kiwi Nurse Academy",
-    "Compare Kiwi Nurse Academy's IQN theory, OSCE clinical and OET/IELTS preparation courses, and see the order most nurses take them in on the way to NZ registration.",
+    "New Zealand Nursing Preparation | DREAMVISION EDUCATION",
+    "Explore DreamVision Education's New Zealand nursing registration preparation services, including IQN theory, OSCE clinical and OET/IELTS support.",
     "courses/index.html", "../",
     COURSES_HERO + COURSES_COMPARE + COURSES_ORDER,
 )
@@ -378,7 +390,7 @@ IQN_FAQ = accordion([
 
 page(
     "courses/iqn-training.html",
-    "IQN Training — NCNZ Theoretical Exam Preparation | Kiwi Nurse Academy",
+    "IQN Training — NCNZ Theoretical Exam Preparation | DREAMVISION EDUCATION",
     "Prepare for the Nursing Council of New Zealand's IQN theoretical exam (Pearson VUE) covering medication safety and nursing knowledge. Live classes and timed mock exams.",
     "courses/iqn-training.html", "../",
     IQN_HERO + IQN_INTRO + IQN_SYLLABUS + '<div class="section"><div class="wrap">' + IQN_FAQ + '</div></div>',
@@ -445,7 +457,7 @@ OSCE_FAQ = accordion([
 
 page(
     "courses/osce-training.html",
-    "OSCE Training — Clinical Simulation Preparation | Kiwi Nurse Academy",
+    "OSCE Training — Clinical Simulation Preparation | DREAMVISION EDUCATION",
     "Simulation-lab OSCE preparation for NCNZ's clinical competence assessment: orientation course content, station drills, and mock OSCEs before your Christchurch exam.",
     "courses/osce-training.html", "../",
     OSCE_HERO + OSCE_INTRO + OSCE_STATIONS + OSCE_TIMELINE + '<div class="section"><div class="wrap">' + OSCE_FAQ + '</div></div>',
@@ -530,7 +542,7 @@ OET_FAQ = accordion([
 
 page(
     "courses/oet-preparation.html",
-    "OET & IELTS Preparation for Nurses | Kiwi Nurse Academy",
+    "OET & IELTS Preparation for Nurses | DREAMVISION EDUCATION",
     "OET and IELTS Academic coaching for internationally qualified nurses, targeting NCNZ's minimum bands across reading, listening, writing and speaking. Includes a free score checker.",
     "courses/oet-preparation.html", "../",
     OET_HERO + OET_INTRO + OET_TOOL + OET_SYLLABUS + '<div class="section"><div class="wrap">' + OET_FAQ + '</div></div>',
@@ -539,20 +551,20 @@ page(
 # ============================================================ ABOUT PAGE
 ABOUT_HERO = page_hero(
     '<a href="index.html">Home</a><span>/</span>About Us',
-    "Built by people who know the route firsthand.",
-    "Kiwi Nurse Academy exists because the gap between passing a nursing exam in Kerala and passing one written for New Zealand's health system is bigger than most training centres admit.",
+    "Guiding dreams. Building global futures.",
+    "DreamVision Education helps students and professionals explore international education and career opportunities, with practical guidance from planning through pre-arrival.",
 )
 
 ABOUT_STORY = """<div class="section">
   <div class="wrap split split--wide-left">
     <div class="stack">
-      <h2>Why we started here</h2>
-      <p>Add your founding story here: who started Kiwi Nurse Academy, what gap you saw in the market, and why Kerala-to-New-Zealand specifically. A specific, honest story (a candidate who struggled, a training gap you noticed) will do more work than a generic mission statement.</p>
-      <p>Since December 2023, NCNZ has assessed internationally qualified nurses through direct testing &mdash; an IQN theory exam, then an orientation course and OSCE &mdash; rather than mostly paperwork. That shift is exactly what this academy is built around: not general nursing coaching, but training mapped to NCNZ's current process, station by station.</p>
+      <h2>Guidance built around your next step</h2>
+      <p>Choosing where to study or work abroad is a significant decision. DreamVision Education supports people exploring opportunities in New Zealand, Australia and the UK, helping them understand the options and prepare for what comes next.</p>
+      <p>Our services include study guidance, pre-arrival preparation, New Zealand nursing registration support, and international work pathways. We aim to make the process clearer, more considered and better matched to each person's goals.</p>
     </div>
     <aside class="note note--jade">
-      <p><strong>Replace this box</strong></p>
-      <p>Add a short, credible detail here &mdash; years the founder(s) spent nursing in NZ, a registration body membership, or the number of the first batch you trained. Specifics build more trust than adjectives.</p>
+      <p><strong>Our promise</strong></p>
+      <p>We provide clear information, practical preparation and a personal point of contact throughout your planning journey.</p>
     </aside>
   </div>
 </div>"""
@@ -561,33 +573,25 @@ ABOUT_VALUES = """<div class="topo section section--fiord">
   <div class="wrap">
     <div class="section-head"><h2>What we won't compromise on</h2></div>
     <dl class="defs">
-      <div><dt>Honest pathway advice</dt><dd>If you're not ready for a course, or NCNZ's requirements have changed, we'll tell you before we take your fee &mdash; not after.</dd></div>
-      <div><dt>Small batches</dt><dd>Every OSCE station and every OET speaking task gets individual feedback. We cap batch sizes to make that possible.</dd></div>
-      <div><dt>Current information</dt><dd>NCNZ's process has changed significantly since 2023. We update our syllabus against their published handbooks, not last year's notes.</dd></div>
-      <div><dt>No visa overreach</dt><dd>We're a training provider, not a licensed migration or immigration adviser. We'll always point you to a licensed adviser for visa-specific advice.</dd></div>
+      <div><dt>Guidance that starts with listening</dt><dd>We take time to understand your experience, priorities and destination before discussing possible next steps.</dd></div>
+      <div><dt>Practical preparation</dt><dd>From course planning to pre-arrival support, we focus on useful information you can act on.</dd></div>
+      <div><dt>Clear expectations</dt><dd>We explain processes and requirements as clearly as possible, and encourage you to verify official rules with the relevant authority.</dd></div>
+      <div><dt>Responsible advice</dt><dd>Visa and immigration advice should come from a licensed immigration adviser or the relevant government authority.</dd></div>
     </dl>
   </div>
 </div>"""
 
-ABOUT_TEAM = """<div class="section">
-  <div class="wrap">
-    <div class="section-head">
-      <h2>Meet the team</h2>
-      <p>Add real names, photos and one-line credentials once your team profiles are ready. Specific registration numbers or years of NZ clinical experience are strong trust signals here.</p>
-    </div>
-    <ul class="team">
-      <li><span class="avatar">?</span><h3>Founder / Director name</h3><p>One line on their nursing/NZ background</p></li>
-      <li><span class="avatar">?</span><h3>Lead OSCE trainer</h3><p>Simulation &amp; clinical training lead</p></li>
-      <li><span class="avatar">?</span><h3>OET/IELTS coach</h3><p>English-language training lead</p></li>
-      <li><span class="avatar">?</span><h3>Student counsellor</h3><p>Enrolment &amp; pathway guidance</p></li>
-    </ul>
+ABOUT_TEAM = """<div class="section section--mist">
+  <div class="wrap split">
+    <div><p class="eyebrow">Start a conversation</p><h2>Let's explore what is possible for you.</h2></div>
+    <div><p>Tell us about your plans and our team will help you identify a useful next step.</p><a class="btn btn--jade" href="contact.html">Contact DreamVision</a></div>
   </div>
 </div>"""
 
 page(
     "about.html",
-    "About Us | Kiwi Nurse Academy",
-    "Kiwi Nurse Academy trains internationally qualified nurses in Kerala for NCNZ's IQN, OSCE and OET/IELTS pathway to registration in New Zealand.",
+    "About Us | DREAMVISION EDUCATION",
+    "DreamVision Education supports study, work, pre-arrival and New Zealand nursing registration pathways.",
     "about.html", "",
     ABOUT_HERO + ABOUT_STORY + ABOUT_VALUES + ABOUT_TEAM,
 )
@@ -595,38 +599,17 @@ page(
 # ============================================================ CAREER PAGE
 CAREER_HERO = page_hero(
     '<a href="index.html">Home</a><span>/</span>Career',
-    "Help nurses reach New Zealand.",
-    "We're building the team for our first full year of batches. If you can teach, coach or mentor toward these exams, we'd like to hear from you.",
+    "Build a future with DreamVision.",
+    "We welcome conversations with people who share our interest in education, international opportunities and helping others plan their next step.",
 )
 
 CAREER_ROLES = """<div class="section">
-  <div class="wrap">
+  <div class="wrap wrap--narrow">
     <div class="section-head">
-      <h2>Current openings</h2>
-      <p>Replace the placeholders below with real openings as they come up. Leaving this page live with "no openings right now, but tell us about yourself" is far better than deleting it.</p>
-    </div>
-    <div class="accordion">
-      <details open>
-        <summary>OSCE / Clinical Simulation Trainer</summary>
-        <div class="answer">
-          <p>Registered nurse with New Zealand clinical or OSCE examiner experience, able to run hands-on simulation sessions and give individual station feedback. Add exact requirements, location and salary band here.</p>
-          <a class="btn btn--line btn--small" data-wa href="#">Apply on WhatsApp</a>
-        </div>
-      </details>
-      <details>
-        <summary>OET / IELTS Coach</summary>
-        <div class="answer">
-          <p>Experience teaching healthcare-specific English, ideally with OET or IELTS examiner or coaching background. Add exact requirements, location and salary band here.</p>
-          <a class="btn btn--line btn--small" data-wa href="#">Apply on WhatsApp</a>
-        </div>
-      </details>
-      <details>
-        <summary>Student Counsellor / Admissions</summary>
-        <div class="answer">
-          <p>First point of contact for enquiries, running diagnostic calls and guiding candidates to the right course. Add exact requirements, location and salary band here.</p>
-          <a class="btn btn--line btn--small" data-wa href="#">Apply on WhatsApp</a>
-        </div>
-      </details>
+      <p class="eyebrow">Opportunities</p>
+      <h2>Work with us</h2>
+      <p>There are no positions currently listed. For future opportunities, send us a brief introduction and the kind of work you would be interested in.</p>
+      <a class="btn btn--jade" href="contact.html">Get in touch</a>
     </div>
   </div>
 </div>"""
@@ -635,9 +618,9 @@ CAREER_WHY = """<div class="section section--mist">
   <div class="wrap">
     <div class="section-head"><h2>Why work with us</h2></div>
     <dl class="facts">
-      <div><dt>Direct impact</dt><dd>You're working on the specific exam that decides whether a nurse's move to New Zealand happens on schedule.</dd></div>
-      <div><dt>Small, hands-on team</dt><dd>Add detail on team size, culture and how decisions get made once you have it &mdash; specifics beat "fast-paced environment."</dd></div>
-      <div><dt>Growing with the batch numbers</dt><dd>Early team members shape how courses are taught as we scale from our first batches onward.</dd></div>
+      <div><dt>Purpose-led work</dt><dd>Contribute to education and career services that help people plan international opportunities.</dd></div>
+      <div><dt>People-first approach</dt><dd>We value clear communication, thoughtful support and respect for each person's goals.</dd></div>
+      <div><dt>Make a difference</dt><dd>Help students and professionals feel more prepared as they take their next step.</dd></div>
     </dl>
   </div>
 </div>"""
@@ -664,8 +647,8 @@ CAREER_APPLY = """<div class="section">
 
 page(
     "career.html",
-    "Careers | Kiwi Nurse Academy",
-    "Join Kiwi Nurse Academy as an OSCE trainer, OET/IELTS coach or student counsellor, training internationally qualified nurses for New Zealand registration.",
+    "Careers | DREAMVISION EDUCATION",
+    "Explore career opportunities with DreamVision Education, supporting international education and career pathways.",
     "career.html", "",
     CAREER_HERO + CAREER_ROLES + CAREER_WHY + CAREER_APPLY,
 )
@@ -702,15 +685,15 @@ FAQ_OSCE = accordion([
 ], "OSCE Training")
 
 FAQ_FEES = accordion([
-    ("What do your courses cost?", "Add your current fee structure here, ideally broken down per course (OET / IQN / OSCE) and any bundle pricing."),
-    ("Do you offer payment plans?", "Add your instalment policy here if you offer one — this is a common question and answering it up front reduces hesitation."),
-    ("Do fees include the official exam fees (Pearson VUE, OET, OSCE)?", "Clarify here whether NCNZ, Pearson VUE, OET/IELTS and OSCE exam fees are separate from your course fee — candidates need this distinction to budget correctly."),
+    ("How much do services and courses cost?", "Costs depend on the service, course and your individual requirements. Contact us for current details and request a written breakdown before making a decision."),
+    ("Are payment plans available?", "Payment arrangements can vary. Please contact us to confirm current options and terms before enrolment."),
+    ("Are official exam or institution fees included?", "Third-party fees may be separate from DreamVision service or course fees. Confirm what is included in your written quote and check current fees with the relevant organisation."),
 ], "Fees &amp; logistics")
 
 page(
     "faq.html",
-    "FAQ | Kiwi Nurse Academy",
-    "Answers to common questions about NCNZ's IQN, OSCE and OET/IELTS pathway, and about Kiwi Nurse Academy's courses, fees and logistics.",
+    "FAQ | DREAMVISION EDUCATION",
+    "Answers to common questions about international study, work, pre-arrival and New Zealand nursing support.",
     "faq.html", "",
     FAQ_HERO + '<div class="section"><div class="wrap wrap--narrow">' + FAQ_GENERAL + FAQ_OET + FAQ_IQN + FAQ_OSCE + FAQ_FEES + '</div></div>',
 )
@@ -718,8 +701,8 @@ page(
 # ============================================================ CONTACT PAGE
 CONTACT_HERO = page_hero(
     '<a href="index.html">Home</a><span>/</span>Contact',
-    "Let's map your pathway.",
-    "Send your details or message us on WhatsApp — most enquiries get a same-day response.",
+    "Let's talk about your next step.",
+    "Tell us what you are planning and our team will help you find the right place to start.",
 )
 
 CONTACT_BODY = """<div class="section">
@@ -727,10 +710,10 @@ CONTACT_BODY = """<div class="section">
     <div>
       <h2>Get in touch</h2>
       <ul class="contact-list">
-        <li><span class="ic">{phone}</span><div><b>Call or WhatsApp</b><a data-tel data-tel-text href="#">+91 00000 00000</a></div></li>
-        <li><span class="ic">{mail}</span><div><b>Email</b><a data-email data-email-text href="#">info@kiwinurseacademy.com</a></div></li>
-        <li><span class="ic">{pin}</span><div><b>India centre</b><span data-addr-india>Add your India centre address, City, Kerala</span></div></li>
-        <li><span class="ic">{pin}</span><div><b>New Zealand</b><span data-addr-nz>Add your New Zealand address (optional)</span></div></li>
+        <li><span class="ic">{phone}</span><div><b>Call or WhatsApp</b><a data-tel data-tel-text href="#">+91 81578 19376</a></div></li>
+        <li><span class="ic">{mail}</span><div><b>Email</b><a data-email data-email-text href="#">info@dreamvisionedu.au</a></div></li>
+        <li><span class="ic">{pin}</span><div><b>Kerala office</b><span data-addr-india>First Floor, Jacob Tower, Post Office Junction, Muvattupuzha, Kerala 686661</span></div></li>
+        <li><span class="ic">{pin}</span><div><b>Australia office</b><span data-addr-nz>Sandown Road, Launceston, Tasmania, Australia</span></div></li>
         <li><span class="ic">{clock}</span><div><b>Hours</b><span data-hours>Mon &ndash; Sat, 9:00 am &ndash; 6:00 pm IST</span></div></li>
       </ul>
       <div class="social" style="margin-top:2rem">
@@ -746,12 +729,13 @@ CONTACT_BODY = """<div class="section">
         <div class="field"><label for="f-phone">Phone / WhatsApp</label><input id="f-phone" name="phone" type="tel" required></div>
         <div class="field form__full"><label for="f-email">Email <span class="opt">(optional)</span></label><input id="f-email" name="email" type="email"></div>
         <div class="field form__full">
-          <label for="f-course">Which course are you asking about?</label>
+          <label for="f-course">Which service can we help with?</label>
           <select id="f-course" name="course">
-            <option>OET / IELTS Preparation</option>
-            <option>IQN Training</option>
-            <option>OSCE Training</option>
-            <option>Not sure — need guidance</option>
+            <option>Study in New Zealand</option>
+            <option>Pre-arrival services</option>
+            <option>New Zealand nursing registration</option>
+            <option>Work in New Zealand or Australia</option>
+            <option>Other / not sure yet</option>
           </select>
         </div>
         <div class="field form__full"><label for="f-msg">Message <span class="opt">(optional)</span></label><textarea id="f-msg" name="message" placeholder="Tell us where you're at — e.g. exam status, target intake"></textarea></div>
@@ -769,8 +753,8 @@ CONTACT_BODY = """<div class="section">
 
 page(
     "contact.html",
-    "Contact Us | Kiwi Nurse Academy",
-    "Get in touch with Kiwi Nurse Academy for IQN, OSCE and OET/IELTS training enquiries. Call, WhatsApp or send an enquiry form.",
+    "Contact Us | DREAMVISION EDUCATION",
+    "Contact DreamVision Education about study, work, pre-arrival and New Zealand nursing support.",
     "contact.html", "",
     CONTACT_HERO + CONTACT_BODY,
 )
@@ -867,7 +851,7 @@ BLOG_HERO = page_hero(
 
 page(
     "blog.html",
-    "Blog | Kiwi Nurse Academy",
+    "Blog | DREAMVISION EDUCATION",
     "Articles on NCNZ's IQN, OSCE and OET/IELTS pathway for internationally qualified nurses moving to New Zealand.",
     "blog.html", "",
     BLOG_HERO + '<div class="section"><div class="wrap"><div class="posts">' + POST_CARDS + '</div></div></div>',
@@ -885,7 +869,7 @@ for p in POSTS:
     </div></div>"""
     page(
         "blog/" + p["slug"] + ".html",
-        p["title"] + " | Kiwi Nurse Academy Blog",
+        p["title"] + " | DREAMVISION EDUCATION Blog",
         p["desc"],
         "blog.html", "../",
         body,

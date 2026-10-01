@@ -1,4 +1,4 @@
-# Kiwi Nurse Academy — website
+# DREAMVISION EDUCATION — website
 
 Plain HTML / CSS / JS. No build step, no framework — open any `.html` file
 directly, or better, serve the folder with VS Code's **Live Server**
@@ -12,10 +12,10 @@ edit it once and every page updates:
 
 ```js
 window.KNA = {
-  whatsapp: "910000000000",   // digits only, country code first, no + or spaces
-  phone: "+910000000000",
-  phoneDisplay: "+91 00000 00000",
-  email: "info@kiwinurseacademy.com",
+  whatsapp: "918157819376",   // digits only, country code first, no + or spaces
+  phone: "+918157819376",
+  phoneDisplay: "+91 81578 19376",
+  email: "info@dreamvisionedu.au",
   addressIndia: "...",
   addressNZ: "...",
   hours: "...",

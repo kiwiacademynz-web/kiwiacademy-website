@@ -1,20 +1,15 @@
 /* ==========================================================
-   KIWI NURSE ACADEMY — site settings
+  DREAMVISION EDUCATION — site settings
    Edit the values below once; every page updates automatically.
    ========================================================== */
 window.KNA = {
-  brand: "Kiwi Nurse Academy",
-  whatsapp: "910000000000",            // country code + number, digits only (no + or spaces)
-  phone: "+910000000000",              // used for tel: links
-  phoneDisplay: "+91 00000 00000",     // shown on the page
-  email: "info@kiwinurseacademy.com",
-  addressIndia: "Add your India centre address, City, Kerala",
-  addressNZ: "Add your New Zealand address (optional)",
+  brand: "DREAMVISION EDUCATION",
+  whatsapp: "918157819376",            // country code + number, digits only (no + or spaces)
+  phone: "+918157819376",              // used for tel: links
+  phoneDisplay: "+91 81578 19376",     // shown on the page
+  email: "info@dreamvisionedu.au",
+  addressIndia: "First Floor, Jacob Tower, Post Office Junction, Muvattupuzha, Kerala 686661",
+  addressNZ: "Sandown Road, Launceston, Tasmania, Australia",
   hours: "Mon – Sat, 9:00 am – 6:00 pm IST",
-  social: {
-    instagram: "https://www.instagram.com/",
-    facebook: "https://www.facebook.com/",
-    youtube: "https://www.youtube.com/",
-    linkedin: "https://www.linkedin.com/"
-  }
+  social: {}
 };

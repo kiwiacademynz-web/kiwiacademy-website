@@ -1,5 +1,5 @@
 /* ==========================================================
-   KIWI NURSE ACADEMY — shared site behaviour
+  DREAMVISION EDUCATION — shared site behaviour
    ========================================================== */
 (function () {
   "use strict";
@@ -7,7 +7,7 @@
 
   /* ---- wire up every data-wa / data-tel / data-email link ---- */
   function wireContactLinks() {
-    var waMsg = "Kia ora! I'd like to know more about Kiwi Nurse Academy's IQN, OSCE and OET training.";
+    var waMsg = "Hello, I'd like to learn more about DreamVision Education's services.";
     document.querySelectorAll("[data-wa]").forEach(function (el) {
       var msg = el.getAttribute("data-wa-msg") || waMsg;
       el.href = "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(msg);
@@ -25,6 +25,7 @@
     document.querySelectorAll("[data-social]").forEach(function (el) {
       var key = el.getAttribute("data-social");
       if (C.social && C.social[key]) el.href = C.social[key];
+      else el.hidden = true;
     });
     document.querySelectorAll("[data-hours]").forEach(function (el) { el.textContent = C.hours; });
     document.querySelectorAll("[data-addr-india]").forEach(function (el) { el.textContent = C.addressIndia; });
