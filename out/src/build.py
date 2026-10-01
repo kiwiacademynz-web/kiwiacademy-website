@@ -5,6 +5,7 @@ Builds the static DreamVision Education site into out/.
 Plain HTML/CSS/JS output — this script is only a dev-time convenience
 so the header/footer/nav stay identical across every page.
 """
+import json
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,6 +21,7 @@ NAV = [
       ("courses/osce-training.html", "Clinical Preparation", "Simulation and exam readiness"),
       ("courses/oet-preparation.html", "English Preparation", "OET and IELTS coaching"),
     ]),
+    ("iqn-learning-app.html", "IQN App", None),
     ("about.html", "About Us", None),
     ("blog.html", "Blog", None),
     ("career.html", "Career", None),
@@ -75,19 +77,67 @@ def nav_html(base, current):
 
 
 def head(title, desc, base, canonical):
+  canonical_path = canonical.replace("\\", "/")
+  if canonical_path.endswith("index.html"):
+    canonical_path = canonical_path[:-10].rstrip("/")
+  elif canonical_path.endswith(".html"):
+    canonical_path = canonical_path[:-5]
+  canonical_url = "https://dreamvisionedu.au/" + canonical_path.lstrip("/")
+  if not canonical_path:
+    canonical_url = "https://dreamvisionedu.au/"
+  structured_data = json.dumps({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://dreamvisionedu.au/#organization",
+        "name": SITE_NAME,
+        "url": "https://dreamvisionedu.au/",
+        "email": "info@dreamvisionedu.au",
+        "telephone": "+918157819376",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "First Floor, Jacob Tower, Post Office Junction",
+          "addressLocality": "Muvattupuzha",
+          "addressRegion": "Kerala",
+          "postalCode": "686661",
+          "addressCountry": "IN",
+        },
+        "areaServed": ["India", "New Zealand", "Australia", "United Kingdom"],
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dreamvisionedu.au/#website",
+        "url": "https://dreamvisionedu.au/",
+        "name": SITE_NAME,
+        "publisher": {"@id": "https://dreamvisionedu.au/#organization"},
+        "inLanguage": "en-AU",
+      },
+    ],
+  }, ensure_ascii=True)
     return """<!doctype html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<link rel="canonical" href="https://dreamvisionedu.au/{canonical}">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="{canonical_url}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:site_name" content="{site}">
+<meta property="og:url" content="{canonical_url}">
+<meta property="og:locale" content="en_AU">
+<meta property="og:image" content="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=85">
+<meta property="og:image:alt" content="Students planning their education and international future">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=85">
+<meta name="theme-color" content="#172d49">
+<script type="application/ld+json">{structured_data}</script>
 <link rel="icon" href="{base}assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,7 +146,7 @@ def head(title, desc, base, canonical):
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-""".format(title=title, desc=desc, base=base, canonical=canonical, site=SITE_NAME)
+""".format(title=title, desc=desc, base=base, canonical_url=canonical_url, site=SITE_NAME, structured_data=structured_data)
 
 
 def header(base, current):
@@ -162,6 +212,7 @@ def footer(base):
         <li><a href="{base}courses/osce-training.html">OSCE Training</a></li>
         <li><a href="{base}courses/oet-preparation.html">OET Preparation</a></li>
         <li><a href="{base}courses/index.html">Compare all courses</a></li>
+        <li><a href="{base}iqn-learning-app.html">IQN Learning App</a></li>
       </ul>
     </div>
     <div>

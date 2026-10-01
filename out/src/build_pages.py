@@ -230,6 +230,25 @@ HOME_SERVICES = """<section class="section home-services" id="services">
     </div>
   </div>
 </section>
+<section class="app-launch">
+  <div class="wrap app-launch__grid">
+    <div class="app-launch__content">
+      <p class="eyebrow">In development</p>
+      <h2>IQN Learning App</h2>
+      <p>DreamVision Education is creating a dedicated learning app for IQN theoretical exam preparation. Release timing and download links will be shared here once confirmed.</p>
+      <div class="btn-row">
+        <a class="btn btn--kowhai" href="iqn-learning-app.html">Explore the app</a>
+        <a class="btn btn--ghost" data-wa data-wa-msg="Hello, I would like to receive updates about the DreamVision IQN Learning App." href="#">Ask for launch updates</a>
+      </div>
+    </div>
+    <div class="app-launch__mark" aria-label="IQN Learning App, coming soon">
+      <span>DREAMVISION EDUCATION</span>
+      <strong>IQN</strong>
+      <b>Learning App</b>
+      <small>COMING SOON</small>
+    </div>
+  </div>
+</section>
 <section class="section section--mist home-approach">
   <div class="wrap split split--wide-left">
     <div class="stack">
@@ -256,6 +275,37 @@ page(
     HOME_BODY,
 )
 print("home done")
+
+IQN_APP_HERO = page_hero(
+    '<a href="index.html">Home</a><span>/</span>IQN Learning App',
+    "A new way to prepare for your IQN exam.",
+    "DreamVision Education is developing a dedicated IQN Learning App for internationally qualified nurses preparing for the New Zealand theoretical examination.",
+    ["In development", "IQN theoretical exam preparation", "By DreamVision Education"],
+)
+
+IQN_APP_BODY = """<section class="section">
+  <div class="wrap split split--wide-left">
+    <div class="stack">
+      <p class="eyebrow">Coming soon</p>
+      <h2>Focused on the IQN learning journey</h2>
+      <p>The IQN Learning App is being developed as a dedicated digital learning resource for candidates preparing for the Nursing Council of New Zealand's theoretical examination.</p>
+      <p>We are still preparing the app for launch. Availability, supported devices, learning materials and store links will be announced here when they are confirmed.</p>
+      <a class="btn btn--kowhai" data-wa data-wa-msg="Hello, I would like to receive updates about the DreamVision IQN Learning App." href="#">Ask for launch updates</a>
+    </div>
+    <aside class="note note--jade">
+      <p><strong>Independent learning resource</strong></p>
+      <p>The app is being developed by DreamVision Education. It is not an official Nursing Council of New Zealand product and does not replace official exam guidance.</p>
+    </aside>
+  </div>
+</section>"""
+
+page(
+    "iqn-learning-app.html",
+    "IQN Learning App | DREAMVISION EDUCATION",
+    "The DreamVision IQN Learning App is in development: a dedicated learning resource for internationally qualified nurses preparing for the New Zealand IQN theoretical exam.",
+    "iqn-learning-app.html", "",
+    IQN_APP_HERO + IQN_APP_BODY,
+)
 
 # ============================================================ SHARED FAQ ACCORDION HELPER
 def accordion(qas, group_title=None):
@@ -543,7 +593,7 @@ OET_FAQ = accordion([
 page(
     "courses/oet-preparation.html",
     "OET & IELTS Preparation for Nurses | DREAMVISION EDUCATION",
-    "OET and IELTS Academic coaching for internationally qualified nurses, targeting NCNZ's minimum bands across reading, listening, writing and speaking. Includes a free score checker.",
+    "OET and IELTS coaching for internationally qualified nurses preparing for New Zealand registration, with a free score checker.",
     "courses/oet-preparation.html", "../",
     OET_HERO + OET_INTRO + OET_TOOL + OET_SYLLABUS + '<div class="section"><div class="wrap">' + OET_FAQ + '</div></div>',
 )

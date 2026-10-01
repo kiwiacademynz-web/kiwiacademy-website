@@ -475,6 +475,17 @@ input:user-invalid, select:user-invalid { border-color: var(--pohutukawa); }
 .approach-list > div { padding: 1.15rem 0; border-top: 1px solid var(--line); }
 .approach-list dt { color: var(--fiord); font: 700 1.15rem var(--font-display); }
 .approach-list dd { margin: .35rem 0 0; color: var(--muted); }
+.app-launch { overflow: hidden; background: var(--fiord); color: #e9eff6; padding-block: clamp(3.5rem, 6vw, 5rem); }
+.app-launch__grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(15rem, .65fr); align-items: center; gap: clamp(2rem, 6vw, 6rem); }
+.app-launch__content { max-width: 44rem; }
+.app-launch__content h2 { color: #fff; }
+.app-launch__content > p:not(.eyebrow) { color: #c5d2df; max-width: 42rem; }
+.app-launch .eyebrow { color: var(--kowhai); }
+.app-launch__mark { width: min(100%, 19rem); aspect-ratio: 1; justify-self: center; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 1.5rem; border: 1px solid rgba(255, 255, 255, .24); border-radius: 8px; background: linear-gradient(145deg, rgba(255, 255, 255, .09), rgba(255, 255, 255, .02)); box-shadow: 0 24px 60px rgba(0, 0, 0, .2); text-align: center; transform: rotate(3deg); }
+.app-launch__mark span { color: #d2deea; font: 700 .68rem var(--font-display); letter-spacing: .08em; }
+.app-launch__mark strong { margin-top: .3rem; color: var(--kowhai); font: 800 5rem/.95 var(--font-display); }
+.app-launch__mark b { color: #fff; font: 700 1.25rem var(--font-display); }
+.app-launch__mark small { margin-top: 1.25rem; padding: .35rem .7rem; border: 1px solid rgba(244, 162, 97, .65); border-radius: 999px; color: #ffd0a7; font: 700 .7rem var(--font-body); letter-spacing: .08em; }
 .site-footer .brand__mark { background: var(--kowhai); color: var(--fiord-deep); }
 @media (max-width: 900px) { .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 620px) {
@@ -483,6 +494,8 @@ input:user-invalid, select:user-invalid { border-color: var(--pohutukawa); }
   .topo.hero h1 { font-size: 2.8rem; }
   .service-grid { grid-template-columns: 1fr; }
   .service-card { min-height: 0; }
+  .app-launch__grid { grid-template-columns: 1fr; }
+  .app-launch__mark { width: min(72vw, 16rem); }
 }
 .brand { letter-spacing: 0; }
 .mt-0 { margin-top: 0; } .mt-2 { margin-top: 2rem; } .mb-0 { margin-bottom: 0; }
