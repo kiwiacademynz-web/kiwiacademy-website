@@ -1,5 +1,5 @@
 /* ==========================================================================
-  DREAMVISION EDUCATION — main stylesheet
+  DREAMVISION — main stylesheet
    Concept: a topographic trail map. The exam journey is the trail.
    Sections:  1 Tokens · 2 Base · 3 Layout · 4 Header · 5 Buttons
               6 Hero + trail map · 7 Components · 8 Forms · 9 Footer · 10 Utilities
@@ -114,6 +114,8 @@ strong { font-weight: 700; }
 .brand { display: inline-flex; align-items: center; gap: .65rem; text-decoration: none; color: var(--fiord); font-family: var(--font-display); font-weight: 800; font-size: 1.28rem; letter-spacing: 0; line-height: 1; }
 .brand:hover { color: var(--fiord); }
 .brand__mark { width: 2.5rem; height: 2.5rem; flex: none; border-radius: 6px; background: var(--kowhai); color: var(--fiord-deep); display: grid; place-items: center; font: 800 1.5rem/1 var(--font-display); }
+.brand__logo { display: block; width: 3rem; height: 3rem; flex: none; object-fit: contain; }
+.brand__name { font: 800 1.1rem/1 var(--font-display); color: var(--fiord); }
 .brand small { display: block; font-family: var(--font-body); font-weight: 700; font-size: .68rem; letter-spacing: .08em; color: var(--muted); margin-top: .22rem; }
 .nav { display: flex; align-items: center; gap: .25rem; }
 .nav a, .nav__btn {

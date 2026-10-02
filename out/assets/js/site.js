@@ -1,5 +1,5 @@
 /* ==========================================================
-  DREAMVISION EDUCATION — shared site behaviour
+  DREAMVISION — shared site behaviour
    ========================================================== */
 (function () {
   "use strict";
@@ -7,16 +7,18 @@
 
   /* ---- wire up every data-wa / data-tel / data-email link ---- */
   function wireContactLinks() {
-    var waMsg = "Hello, I'd like to learn more about DreamVision Education's services.";
+    var waMsg = "Hello, I'd like to learn more about DREAMVISION's services.";
     document.querySelectorAll("[data-wa]").forEach(function (el) {
       var msg = el.getAttribute("data-wa-msg") || waMsg;
       el.href = "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(msg);
       if (el.target === undefined || !el.hasAttribute("target")) el.target = "_blank";
       el.rel = "noopener";
     });
-    document.querySelectorAll("[data-tel]").forEach(function (el) {
-      el.href = "tel:" + C.phone;
-      if (el.hasAttribute("data-tel-text")) el.textContent = C.phoneDisplay;
+    document.querySelectorAll("[data-phone-australia]").forEach(function (el) {
+      el.href = "tel:" + C.phoneAustralia;
+    });
+    document.querySelectorAll("[data-phone-india]").forEach(function (el) {
+      el.href = "tel:" + C.phoneIndia;
     });
     document.querySelectorAll("[data-email]").forEach(function (el) {
       el.href = "mailto:" + C.email;
@@ -28,8 +30,9 @@
       else el.hidden = true;
     });
     document.querySelectorAll("[data-hours]").forEach(function (el) { el.textContent = C.hours; });
-    document.querySelectorAll("[data-addr-india]").forEach(function (el) { el.textContent = C.addressIndia; });
-    document.querySelectorAll("[data-addr-nz]").forEach(function (el) { el.textContent = C.addressNZ; });
+    document.querySelectorAll("[data-address-australia]").forEach(function (el) { el.textContent = C.addressAustralia; });
+    document.querySelectorAll("[data-address-muvattupuzha]").forEach(function (el) { el.textContent = C.addressMuvattupuzha; });
+    document.querySelectorAll("[data-address-kannur]").forEach(function (el) { el.textContent = C.addressKannur; });
   }
 
   /* ---- mobile nav ---- */

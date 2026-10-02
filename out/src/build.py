@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Builds the static DreamVision Education site into out/.
+Builds the static DREAMVISION site into out/.
 Plain HTML/CSS/JS output — this script is only a dev-time convenience
 so the header/footer/nav stay identical across every page.
 """
@@ -11,17 +11,20 @@ import os
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "out")
 
-SITE_NAME = "DREAMVISION EDUCATION"
+SITE_NAME = "DREAMVISION"
 
 # ---------------------------------------------------------------- nav model
 NAV = [
     ("index.html", "Home", None),
     ("courses/index.html", "Services", [
-      ("courses/iqn-training.html", "Nursing Registration", "New Zealand pathway guidance"),
-      ("courses/osce-training.html", "Clinical Preparation", "Simulation and exam readiness"),
-      ("courses/oet-preparation.html", "English Preparation", "OET and IELTS coaching"),
+      ("contact.html", "Study in New Zealand", "Education pathways"),
+      ("contact.html", "Study in Australia", "Education pathways"),
+      ("contact.html", "Pre-arrival services", "Prepare for your move"),
+      ("courses/index.html", "New Zealand nursing registration", "Registration support"),
+      ("contact.html", "Australian nursing registration", "Registration support"),
+      ("contact.html", "ANMAC assessment", "Assessment support"),
+      ("contact.html", "Australian and New Zealand PR and visa support", "Pathway guidance"),
     ]),
-    ("iqn-learning-app.html", "IQN App", None),
     ("about.html", "About Us", None),
     ("blog.html", "Blog", None),
     ("career.html", "Career", None),
@@ -65,7 +68,7 @@ def nav_html(base, current):
                     label=label, chev=icon("chevron"),
                 )
             )
-            out.append('<a href="{href}">{label}<small>{d}</small></a>'.format(href=base + "courses/index.html", label="All courses", d="Compare IQN, OSCE and OET"))
+            out.append('<a href="{href}">{label}<small>{d}</small></a>'.format(href=base + "contact.html", label="All services", d="Study, registration and visa support"))
             for shref, slabel, sdesc in sub:
                 out.append('<a href="{href}">{label}<small>{d}</small></a>'.format(href=base + shref, label=slabel, d=sdesc))
             out.append('</div></div>')
@@ -94,16 +97,15 @@ def head(title, desc, base, canonical):
         "name": SITE_NAME,
         "url": "https://dreamvisionedu.au/",
         "email": "info@dreamvisionedu.au",
-        "telephone": "+918157819376",
+        "telephone": "+61450719376",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "First Floor, Jacob Tower, Post Office Junction",
-          "addressLocality": "Muvattupuzha",
-          "addressRegion": "Kerala",
-          "postalCode": "686661",
-          "addressCountry": "IN",
+          "streetAddress": "140 William Street",
+          "addressLocality": "Melbourne",
+          "addressRegion": "Victoria",
+          "addressCountry": "AU",
         },
-        "areaServed": ["India", "New Zealand", "Australia", "United Kingdom"],
+        "areaServed": ["India", "New Zealand", "Australia"],
       },
       {
         "@type": "WebSite",
@@ -138,7 +140,10 @@ def head(title, desc, base, canonical):
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=85">
 <meta name="theme-color" content="#172d49">
 <script type="application/ld+json">{structured_data}</script>
-<link rel="icon" href="{base}assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{base}assets/img/favicon/favicon.ico" sizes="any">
+<link rel="icon" href="{base}assets/img/favicon/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="{base}assets/img/favicon/favicon-16x16.png" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="{base}assets/img/favicon/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -154,7 +159,8 @@ def header(base, current):
   <div class="wrap">
     <span class="topbar__tagline">Guiding Dreams, Building Global Futures</span>
     <div class="topbar__links">
-      <a data-tel data-tel-text href="#">+91 81578 19376</a>
+      <a data-phone-australia href="tel:+61450719376">+61 450 719 376</a>
+      <a data-phone-india href="tel:+919656219376">+91 96562 19376</a>
       <a data-email data-email-text href="#">info@dreamvisionedu.au</a>
     </div>
   </div>
@@ -162,8 +168,8 @@ def header(base, current):
 <div class="site-header">
   <div class="wrap">
     <a class="brand" href="{base}index.html">
-      <span class="brand__mark">D</span>
-      <span>DREAMVISION<small>EDUCATION</small></span>
+      <img class="brand__logo" src="{base}assets/img/logo/logo.png" alt="">
+      <span class="brand__name">DREAMVISION</span>
     </a>
     <nav class="nav" aria-label="Primary">
       {nav}
@@ -182,7 +188,7 @@ def footer(base):
   <div class="wrap cta-band__grid">
     <div>
       <h2>Your next chapter can start with one conversation.</h2>
-      <p>Talk with our team about study, work, nursing registration or preparing for life abroad.</p>
+      <p>Talk with our team about study, nursing registration, assessments or visa pathways.</p>
     </div>
     <div class="btn-row">
       <a class="btn btn--kowhai" data-wa href="#">{wa} Connect with us</a>
@@ -194,10 +200,10 @@ def footer(base):
   <div class="wrap footer__grid">
     <div>
       <a class="brand" href="{base}index.html">
-        <span class="brand__mark">D</span>
-        <span>DREAMVISION EDUCATION</span>
+        <img class="brand__logo" src="{base}assets/img/logo/logo.png" alt="">
+        <span class="brand__name">DREAMVISION</span>
       </a>
-      <p class="footer__about">Education, career and arrival guidance for students and professionals planning their next step abroad.</p>
+      <p class="footer__about">Study, registration and arrival support for students and nurses planning their next step in Australia and New Zealand.</p>
       <div class="social">
         <a data-social="instagram" href="#" aria-label="Instagram">{insta}</a>
         <a data-social="facebook" href="#" aria-label="Facebook">{fb}</a>
@@ -208,11 +214,13 @@ def footer(base):
     <div>
       <h4>Services</h4>
       <ul>
-        <li><a href="{base}courses/iqn-training.html">IQN Training</a></li>
-        <li><a href="{base}courses/osce-training.html">OSCE Training</a></li>
-        <li><a href="{base}courses/oet-preparation.html">OET Preparation</a></li>
-        <li><a href="{base}courses/index.html">Compare all courses</a></li>
-        <li><a href="{base}iqn-learning-app.html">IQN Learning App</a></li>
+        <li><a href="{base}contact.html">Study in New Zealand</a></li>
+        <li><a href="{base}contact.html">Study in Australia</a></li>
+        <li><a href="{base}contact.html">Pre-arrival services</a></li>
+        <li><a href="{base}courses/index.html">New Zealand nursing registration</a></li>
+        <li><a href="{base}contact.html">Australian nursing registration</a></li>
+        <li><a href="{base}contact.html">ANMAC assessment</a></li>
+        <li><a href="{base}contact.html">Australian and New Zealand PR and visa support</a></li>
       </ul>
     </div>
     <div>
@@ -228,18 +236,20 @@ def footer(base):
     <div>
       <h4>Get in touch</h4>
       <ul>
-        <li>{pin} <span data-addr-india>First Floor, Jacob Tower, Post Office Junction, Muvattupuzha, Kerala 686661</span></li>
-        <li>{phone} <a data-tel data-tel-text href="#">+91 81578 19376</a></li>
+        <li>{pin} <span data-address-australia>140 William Street Melbourne Victoria Australia</span></li>
+        <li>{pin} <span data-address-muvattupuzha>First Floor, Jacob Tower, Post Office Junction, Muvattupuzha, Kerala 686661</span></li>
+        <li>{pin} <span data-address-kannur>JHF Arcade, Pamban Madhavan Rd, Talap, Kannur, Keralam 670002, India</span></li>
+        <li>{phone} <a data-phone-australia href="tel:+61450719376">+61 450 719 376</a></li>
+        <li>{phone} <a data-phone-india href="tel:+919656219376">+91 96562 19376</a></li>
         <li>{mail} <a data-email data-email-text href="#">info@dreamvisionedu.au</a></li>
-        <li>{pin} <span data-addr-nz>Sandown Road, Launceston, Tasmania, Australia</span></li>
         <li>{clock} <span data-hours>Mon &ndash; Sat, 9:00 am &ndash; 6:00 pm IST</span></li>
       </ul>
     </div>
   </div>
   <div class="wrap footer__legal">
-    <p>DreamVision Education provides education and career guidance. Immigration advice and visa decisions should be confirmed with the relevant government authority or a licensed immigration adviser. Course requirements and policies can change; please confirm details with the relevant institution or registration body.</p>
+    <p>DREAMVISION provides study, nursing registration and visa pathway support. Immigration advice and visa decisions should be confirmed with the relevant government authority or a licensed immigration adviser. Course requirements and policies can change; please confirm details with the relevant institution or registration body.</p>
     <div class="footer__bottom">
-      <span>&copy; <span id="y"></span> DreamVision Education. All rights reserved.</span>
+      <span>&copy; <span id="y"></span> DREAMVISION. All rights reserved.</span>
       <ul><li><a href="{base}contact.html">Privacy</a></li><li><a href="{base}contact.html">Terms</a></li></ul>
     </div>
   </div>

@@ -53,9 +53,9 @@ HOME_HERO = """<div class="topo hero">
   <div class="wrap hero__grid">
     <div>
       <h1>Make your next chapter a global one.</h1>
-      <p class="lead">Study, work and build your future across New Zealand, Australia and the UK, with thoughtful guidance from your first conversation through arrival.</p>
+      <p class="lead">Study and build your future across New Zealand and Australia, with thoughtful guidance from your first conversation through arrival.</p>
       <ul class="hero__proof">
-        <li>{c1} Personal guidance for study and career pathways abroad</li>
+        <li>{c1} Guidance for study and nursing registration pathways</li>
         <li>{c2} Support with planning, applications and pre-arrival preparation</li>
         <li>{c3} Clear next steps shaped around your goals and destination</li>
       </ul>
@@ -84,13 +84,13 @@ HOME_ROUTES = """<div class="section">
       <li class="route route--oet">
         <div>
           <h3>OET Preparation</h3>
-          <p class="route__for">For nurses who haven't yet met NCNZ's English-language requirement.</p>
+          <p class="route__for">One-to-one online coaching for nurses preparing for the English-language requirement.</p>
         </div>
         <div>
           <p>NCNZ requires a minimum OET score of 350 in reading, listening and speaking, and 300 in writing &mdash; or 7.0/7.0/7.0/6.5 on IELTS Academic. We drill each sub-test against the healthcare-specific format so your score reflects your real clinical English, not just test technique.</p>
           <ul class="route__facts">
+            <li>One-to-one online classes</li>
             <li>All 4 sub-tests covered</li>
-            <li>Speaking role-plays with feedback</li>
             <li>Score can be built across sittings within 12 months</li>
           </ul>
         </div>
@@ -99,7 +99,7 @@ HOME_ROUTES = """<div class="section">
       <li class="route route--iqn">
         <div>
           <h3>IQN Training</h3>
-          <p class="route__for">For nurses ready to sit NCNZ's online theoretical examination.</p>
+          <p class="route__for">Online training for nurses preparing for NCNZ's theoretical examination.</p>
         </div>
         <div>
           <p>The IQN theoretical exam is taken at a Pearson VUE centre and covers medication safety and nursing knowledge against New Zealand's clinical standards and scope of practice &mdash; not your home country's. We rebuild your theory around that difference.</p>
@@ -114,10 +114,10 @@ HOME_ROUTES = """<div class="section">
       <li class="route route--osce">
         <div>
           <h3>OSCE Training</h3>
-          <p class="route__for">For nurses invited to the clinical competence assessment.</p>
+          <p class="route__for">Online and in-person preparation for nurses invited to the clinical competence assessment.</p>
         </div>
         <div>
-          <p>The clinical competence assessment is a 2-day orientation and preparation course followed by an OSCE at Nurse Maude, Christchurch &mdash; both taken in person. We run the same station structure in our simulation lab so the real thing feels like a repeat, not a surprise.</p>
+          <p>Our OSCE preparation is available online and in person. The official 2-day orientation and preparation course and OSCE are held in person in Christchurch; we help you practise the station structure before assessment day.</p>
           <ul class="route__facts">
             <li>Station-by-station simulation drills</li>
             <li>Cultural-safety &amp; tikanga orientation</li>
@@ -216,13 +216,12 @@ HOME_STORIES = ""
 HOME_METRICS = """<section class="section metrics-section" aria-labelledby="metrics-title">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">DreamVision impact</p>
+      <p class="eyebrow">DREAMVISION impact</p>
       <h2 id="metrics-title">Guidance trusted by students and professionals.</h2>
     </div>
     <dl class="metrics-grid">
       <div class="metric"><dt>1500+</dt><dd>Satisfied customers</dd></div>
       <div class="metric"><dt>250+</dt><dd>Student visas</dd></div>
-      <div class="metric"><dt>100+</dt><dd>Placements</dd></div>
       <div class="metric"><dt>99.9%</dt><dd>Satisfaction</dd></div>
     </dl>
   </div>
@@ -233,34 +232,16 @@ HOME_SERVICES = """<section class="section home-services" id="services">
     <div class="section-head">
       <p class="eyebrow">Our services</p>
       <h2>One trusted guide. A world of possibilities.</h2>
-      <p>Whether you're planning to study, work or settle into a new destination, we'll help you understand the options and move forward with confidence.</p>
+      <p>Whether you're planning to study or pursue nursing registration, we'll help you understand the options and move forward with confidence.</p>
     </div>
     <div class="service-grid">
-      <a class="service-card" href="contact.html"><span class="service-card__num">01</span><h3>Study in New Zealand</h3><p>Explore courses and education pathways that fit your plans, background and ambitions.</p><span class="service-card__link">Explore study options <span aria-hidden="true">&rarr;</span></span></a>
-      <a class="service-card" href="contact.html"><span class="service-card__num">02</span><h3>Pre-arrival services</h3><p>Prepare for the move with practical guidance on travel, accommodation and settling in.</p><span class="service-card__link">Plan your arrival <span aria-hidden="true">&rarr;</span></span></a>
-      <a class="service-card" href="courses/index.html"><span class="service-card__num">03</span><h3>NZ nursing registration</h3><p>Prepare for the English, theory and clinical assessment stages of the New Zealand pathway.</p><span class="service-card__link">Explore nursing preparation <span aria-hidden="true">&rarr;</span></span></a>
-      <a class="service-card" href="contact.html"><span class="service-card__num">04</span><h3>UK, New Zealand &amp; Australia</h3><p>Compare international study and career directions with support tailored to your next step.</p><span class="service-card__link">Discuss destinations <span aria-hidden="true">&rarr;</span></span></a>
-      <a class="service-card" href="contact.html"><span class="service-card__num">05</span><h3>Work in New Zealand</h3><p>Understand career pathways and the preparation involved in pursuing work opportunities.</p><span class="service-card__link">Talk through your plans <span aria-hidden="true">&rarr;</span></span></a>
-      <a class="service-card" href="contact.html"><span class="service-card__num">06</span><h3>Work in Australia</h3><p>Get a clearer view of professional opportunities and practical next steps in Australia.</p><span class="service-card__link">Talk through your plans <span aria-hidden="true">&rarr;</span></span></a>
-    </div>
-  </div>
-</section>
-<section class="app-launch">
-  <div class="wrap app-launch__grid">
-    <div class="app-launch__content">
-      <p class="eyebrow">In development</p>
-      <h2>IQN Learning App</h2>
-      <p>DreamVision Education is creating a dedicated learning app for IQN theoretical exam preparation. Release timing and download links will be shared here once confirmed.</p>
-      <div class="btn-row">
-        <a class="btn btn--kowhai" href="iqn-learning-app.html">Explore the app</a>
-        <a class="btn btn--ghost" data-wa data-wa-msg="Hello, I would like to receive updates about the DreamVision IQN Learning App." href="#">Ask for launch updates</a>
-      </div>
-    </div>
-    <div class="app-launch__mark" aria-label="IQN Learning App, coming soon">
-      <span>DREAMVISION EDUCATION</span>
-      <strong>IQN</strong>
-      <b>Learning App</b>
-      <small>COMING SOON</small>
+      <a class="service-card" href="contact.html"><span class="service-card__num">01</span><h3>Study in New Zealand</h3><p>Explore education options and plan your New Zealand study pathway.</p><span class="service-card__link">Explore study options <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="contact.html"><span class="service-card__num">02</span><h3>Study in Australia</h3><p>Get guidance on Australian study options and the application process.</p><span class="service-card__link">Explore study options <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="contact.html"><span class="service-card__num">03</span><h3>Pre-arrival services</h3><p>Prepare for your move with practical planning and settling-in support.</p><span class="service-card__link">Plan your arrival <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="courses/index.html"><span class="service-card__num">04</span><h3>New Zealand nursing registration</h3><p>Understand the registration pathway and prepare for its assessment stages.</p><span class="service-card__link">Explore registration support <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="contact.html"><span class="service-card__num">05</span><h3>Australian nursing registration</h3><p>Get guidance on registration requirements and your next steps in Australia.</p><span class="service-card__link">Explore registration support <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="contact.html"><span class="service-card__num">06</span><h3>ANMAC assessment</h3><p>Get support to understand and prepare for your ANMAC skills assessment.</p><span class="service-card__link">Discuss your assessment <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="contact.html"><span class="service-card__num">07</span><h3>Australian and New Zealand PR and visa support</h3><p>Get support with permanent residency pathways and visa-related processes.</p><span class="service-card__link">Discuss your pathway <span aria-hidden="true">&rarr;</span></span></a>
     </div>
   </div>
 </section>
@@ -270,7 +251,7 @@ HOME_SERVICES = """<section class="section home-services" id="services">
       <p class="eyebrow">A more considered way forward</p>
       <h2>Big decisions deserve clear guidance.</h2>
       <p class="lead">Every international journey is different. We take time to understand where you are now, what you want to achieve and which next step makes sense.</p>
-      <a class="btn btn--jade" href="contact.html">Speak with DreamVision</a>
+      <a class="btn btn--jade" href="contact.html">Speak with DREAMVISION</a>
     </div>
     <dl class="approach-list">
       <div><dt>Start with your goals</dt><dd>We listen first, then help you explore pathways relevant to your experience and plans.</dd></div>
@@ -284,43 +265,12 @@ HOME_BODY = HOME_HERO + HOME_METRICS + HOME_SERVICES + HOME_APPROACH
 
 page(
     "index.html",
-    "DREAMVISION EDUCATION | Study, Work & Nursing Pathways Abroad",
-    "Explore study, work, pre-arrival and New Zealand nursing registration support with DreamVision Education in Kerala and Australia.",
+    "DREAMVISION | Study and Nursing Pathway Support",
+    "Explore study, pre-arrival and nursing registration support in New Zealand and Australia.",
     "index.html", "",
     HOME_BODY,
 )
 print("home done")
-
-IQN_APP_HERO = page_hero(
-    '<a href="index.html">Home</a><span>/</span>IQN Learning App',
-    "A new way to prepare for your IQN exam.",
-    "DreamVision Education is developing a dedicated IQN Learning App for internationally qualified nurses preparing for the New Zealand theoretical examination.",
-    ["In development", "IQN theoretical exam preparation", "By DreamVision Education"],
-)
-
-IQN_APP_BODY = """<section class="section">
-  <div class="wrap split split--wide-left">
-    <div class="stack">
-      <p class="eyebrow">Coming soon</p>
-      <h2>Focused on the IQN learning journey</h2>
-      <p>The IQN Learning App is being developed as a dedicated digital learning resource for candidates preparing for the Nursing Council of New Zealand's theoretical examination.</p>
-      <p>We are still preparing the app for launch. Availability, supported devices, learning materials and store links will be announced here when they are confirmed.</p>
-      <a class="btn btn--kowhai" data-wa data-wa-msg="Hello, I would like to receive updates about the DreamVision IQN Learning App." href="#">Ask for launch updates</a>
-    </div>
-    <aside class="note note--jade">
-      <p><strong>Independent learning resource</strong></p>
-      <p>The app is being developed by DreamVision Education. It is not an official Nursing Council of New Zealand product and does not replace official exam guidance.</p>
-    </aside>
-  </div>
-</section>"""
-
-page(
-    "iqn-learning-app.html",
-    "IQN Learning App | DREAMVISION EDUCATION",
-    "The DreamVision IQN Learning App is in development: a dedicated learning resource for internationally qualified nurses preparing for the New Zealand IQN theoretical exam.",
-    "iqn-learning-app.html", "",
-    IQN_APP_HERO + IQN_APP_BODY,
-)
 
 # ============================================================ SHARED FAQ ACCORDION HELPER
 def accordion(qas, group_title=None):
@@ -356,7 +306,7 @@ COURSES_COMPARE = """<div class="section">
             <th><span class="pill pill--oet">OET Preparation</span></th>
             <td>OET (all 4 sub-tests) or IELTS Academic</td>
             <td>Nurses who haven't yet met NCNZ's English-language requirement</td>
-            <td>Live online + in-centre speaking practice</td>
+            <td>One-to-one online classes</td>
             <td><a class="btn btn--line btn--small" href="oet-preparation.html">View course</a></td>
           </tr>
           <tr>
@@ -370,7 +320,7 @@ COURSES_COMPARE = """<div class="section">
             <th><span class="pill pill--osce">OSCE Training</span></th>
             <td>Orientation &amp; preparation course + OSCE</td>
             <td>Nurses invited to the clinical competence assessment</td>
-            <td>In-centre simulation lab, hands-on stations</td>
+            <td>Online and in-person preparation</td>
             <td><a class="btn btn--line btn--small" href="osce-training.html">View course</a></td>
           </tr>
         </tbody>
@@ -397,8 +347,8 @@ COURSES_ORDER = """<div class="section section--mist">
 
 page(
     "courses/index.html",
-    "New Zealand Nursing Preparation | DREAMVISION EDUCATION",
-    "Explore DreamVision Education's New Zealand nursing registration preparation services, including IQN theory, OSCE clinical and OET/IELTS support.",
+    "New Zealand Nursing Preparation | DREAMVISION",
+    "Explore DREAMVISION's New Zealand nursing registration preparation, including IQN theory, OSCE clinical and OET/IELTS support.",
     "courses/index.html", "../",
     COURSES_HERO + COURSES_COMPARE + COURSES_ORDER,
 )
@@ -407,8 +357,8 @@ page(
 IQN_HERO = page_hero(
     '<a href="../index.html">Home</a><span>/</span><a href="index.html">Courses</a><span>/</span>IQN Training',
     "IQN Training",
-    "Prepare for the Nursing Council of New Zealand's online theoretical examination &mdash; the test of your medication safety and nursing knowledge against New Zealand's own clinical standards.",
-    ["Pearson VUE format", "Part A + Part B covered", "Live classes + timed mocks"],
+    "Prepare online for the Nursing Council of New Zealand's theoretical examination, covering medication safety and nursing knowledge against New Zealand's clinical standards.",
+    ["Online classes", "Part A + Part B covered", "Timed mock exams"],
 )
 
 IQN_INTRO = """<div class="section">
@@ -436,7 +386,7 @@ IQN_SYLLABUS = """<div class="section section--mist">
       <h2>What's covered in the course</h2>
     </div>
     <dl class="facts">
-      <div><dt>Format</dt><dd>Live online classes, 3 sessions a week, plus recorded sessions for revision.</dd></div>
+      <div><dt>Format</dt><dd>Online classes, 3 sessions a week, plus recorded sessions for revision.</dd></div>
       <div><dt>Duration</dt><dd>Typically 6&ndash;8 weeks, depending on your starting point &mdash; confirmed after your diagnostic assessment.</dd></div>
       <div><dt>Part A focus</dt><dd>Drug calculations, medication administration rights, high-alert medicines, and documentation standards used in New Zealand practice.</dd></div>
       <div><dt>Part B focus</dt><dd>Clinical scenarios covering adult, maternal, mental health and paediatric nursing, escalation of care, and New Zealand's scope-of-practice framework.</dd></div>
@@ -455,7 +405,7 @@ IQN_FAQ = accordion([
 
 page(
     "courses/iqn-training.html",
-    "IQN Training — NCNZ Theoretical Exam Preparation | DREAMVISION EDUCATION",
+    "IQN Training — NCNZ Theoretical Exam Preparation | DREAMVISION",
     "Prepare for the Nursing Council of New Zealand's IQN theoretical exam (Pearson VUE) covering medication safety and nursing knowledge. Live classes and timed mock exams.",
     "courses/iqn-training.html", "../",
     IQN_HERO + IQN_INTRO + IQN_SYLLABUS + '<div class="section"><div class="wrap">' + IQN_FAQ + '</div></div>',
@@ -465,24 +415,24 @@ page(
 OSCE_HERO = page_hero(
     '<a href="../index.html">Home</a><span>/</span><a href="index.html">Courses</a><span>/</span>OSCE Training',
     "OSCE Training",
-    "Simulation-lab preparation for the clinical competence assessment: the 2-day orientation and preparation course, and the objective structured clinical examination held in Christchurch.",
-    ["2-day OPC + 3-hour OSCE", "Nurse Maude station format", "In-person simulation lab"],
+    "Prepare for the clinical competence assessment with OSCE training available online and in person. The official orientation course and examination are held in Christchurch.",
+    ["Online and in-person training", "2-day OPC + 3-hour OSCE", "Official assessment in Christchurch"],
 )
 
 OSCE_INTRO = """<div class="section">
   <div class="wrap split split--wide-left">
     <div class="stack">
       <h2>What the clinical competence assessment involves</h2>
-      <p>Once you pass the IQN theoretical exam, NCNZ invites you to the clinical competence assessment. This has two parts, both taken in person in Christchurch:</p>
+      <p>Once you pass the IQN theoretical exam, NCNZ invites you to the clinical competence assessment. Our OSCE preparation is available online and in person; the official assessment has two parts, both taken in person in Christchurch:</p>
       <ul class="tick-list">
         <li><strong>Two-day orientation and preparation course (OPC).</strong> Covers cultural safety, whānau-centred care and tikanga, an overview of the New Zealand health system, communication and escalation skills, and hands-on familiarisation with the clinical equipment and OSCE format.</li>
         <li><strong>Objective structured clinical examination (OSCE).</strong> A roughly three-hour exam held at an accredited simulation and assessment centre in Christchurch, made up of timed stations that each test a specific clinical skill in a simulated setting.</li>
       </ul>
-      <p>The OSCE format has been used internationally &mdash; including in Australia, Canada and the UK &mdash; for decades, so it's well understood. What trips candidates up isn't the format, it's the New Zealand-specific detail inside each station: the exact phrasing expected when escalating a concern, the equipment layout, and the cultural-safety framing examiners are listening for.</p>
+      <p>The OSCE format has been used internationally for decades. What trips candidates up isn't the format, it's the New Zealand-specific detail inside each station: the exact phrasing expected when escalating a concern, the equipment layout, and the cultural-safety framing examiners are listening for.</p>
     </div>
     <aside class="note note--warn">
-      <p><strong>This exam is taken in person, no exceptions</strong></p>
-      <p>Both the orientation course and the OSCE must be attended in New Zealand &mdash; there's no remote or online sitting for the clinical stage. Our job is to make sure the trip is a formality, not a gamble.</p>
+      <p><strong>The official assessment is in person</strong></p>
+      <p>The orientation course and OSCE must be attended in New Zealand. Our preparation classes, however, are available online and in person.</p>
     </aside>
   </div>
 </div>"""
@@ -491,7 +441,7 @@ OSCE_STATIONS = """<div class="section section--fiord topo">
   <div class="wrap">
     <div class="section-head">
       <h2>How we train for it</h2>
-      <p>Our simulation lab is set up to mirror the station structure candidates report from the real OSCE, so the exam day itself becomes familiar ground.</p>
+      <p>OSCE preparation is available online and in person. Practice follows the station structure candidates report from the real assessment, so exam day feels familiar.</p>
     </div>
     <dl class="defs">
       <div><dt>Station walkthroughs</dt><dd>Full run-throughs of common station types &mdash; medication administration, wound care, patient assessment, and escalation scenarios &mdash; with a marker's-eye view of what's being scored.</dd></div>
@@ -506,7 +456,7 @@ OSCE_TIMELINE = """<div class="section">
   <div class="wrap">
     <div class="section-head"><h2>Your OSCE week, station by station</h2></div>
     <ol class="timeline">
-      <li class="is-kna"><span class="tag tag--kna">With us</span><h3>Weeks before: simulation practice</h3><p>Station drills, mock OSCEs and communication coaching at our Kerala centre, building both clinical accuracy and exam-day composure.</p></li>
+      <li class="is-kna"><span class="tag tag--kna">With us</span><h3>Weeks before: simulation practice</h3><p>Online or in-person station drills, mock OSCEs and communication coaching build clinical accuracy and exam-day composure.</p></li>
       <li><span class="tag tag--you">In NZ</span><h3>Day 1&ndash;2: Orientation &amp; preparation course</h3><p>In-person at an accredited centre &mdash; cultural safety, the NZ health system, escalation skills, and hands-on time with the exact equipment you'll be assessed on.</p></li>
       <li><span class="tag tag--you">In NZ</span><h3>OSCE day</h3><p>The roughly three-hour clinical exam at the simulation and assessment centre in Christchurch, moving station to station against the clock.</p></li>
       <li><span class="tag tag--you">After</span><h3>Results &amp; registration</h3><p>NCNZ notifies you of your result. A pass completes your competence assessment, clearing the way to registration.</p></li>
@@ -522,7 +472,7 @@ OSCE_FAQ = accordion([
 
 page(
     "courses/osce-training.html",
-    "OSCE Training — Clinical Simulation Preparation | DREAMVISION EDUCATION",
+    "OSCE Training — Clinical Simulation Preparation | DREAMVISION",
     "Simulation-lab OSCE preparation for NCNZ's clinical competence assessment: orientation course content, station drills, and mock OSCEs before your Christchurch exam.",
     "courses/osce-training.html", "../",
     OSCE_HERO + OSCE_INTRO + OSCE_STATIONS + OSCE_TIMELINE + '<div class="section"><div class="wrap">' + OSCE_FAQ + '</div></div>',
@@ -532,8 +482,8 @@ page(
 OET_HERO = page_hero(
     '<a href="../index.html">Home</a><span>/</span><a href="index.html">Courses</a><span>/</span>OET Preparation',
     "OET Preparation",
-    "Reach NCNZ's English-language requirement with healthcare-specific OET (or IELTS Academic) coaching across all four sub-tests.",
-    ["OET or IELTS Academic", "All 4 sub-tests", "Scores can be combined within 12 months"],
+    "Prepare online in one-to-one OET classes for NCNZ's English-language requirement, with coaching across all four sub-tests.",
+    ["One-to-one online classes", "All 4 sub-tests", "OET or IELTS Academic"],
 )
 
 OET_INTRO = """<div class="section">
@@ -590,6 +540,7 @@ OET_SYLLABUS = """<div class="section">
   <div class="wrap">
     <div class="section-head"><h2>What's covered in the course</h2></div>
     <dl class="facts">
+      <div><dt>Class format</dt><dd>One-to-one online classes tailored to your learning needs and test goals.</dd></div>
       <div><dt>Listening</dt><dd>Consultation extracts and case-note style tasks drawn from real clinical situations, with active-listening strategy coaching.</dd></div>
       <div><dt>Reading</dt><dd>Time-boxed practice on healthcare texts, matching, gap-fill and detailed comprehension tasks in the exact OET format.</dd></div>
       <div><dt>Writing</dt><dd>Referral-letter writing practice with structured feedback on organisation, clinical accuracy and register.</dd></div>
@@ -607,7 +558,7 @@ OET_FAQ = accordion([
 
 page(
     "courses/oet-preparation.html",
-    "OET & IELTS Preparation for Nurses | DREAMVISION EDUCATION",
+    "OET & IELTS Preparation for Nurses | DREAMVISION",
     "OET and IELTS coaching for internationally qualified nurses preparing for New Zealand registration, with a free score checker.",
     "courses/oet-preparation.html", "../",
     OET_HERO + OET_INTRO + OET_TOOL + OET_SYLLABUS + '<div class="section"><div class="wrap">' + OET_FAQ + '</div></div>',
@@ -617,15 +568,15 @@ page(
 ABOUT_HERO = page_hero(
     '<a href="index.html">Home</a><span>/</span>About Us',
     "Guiding dreams. Building global futures.",
-    "DreamVision Education helps students and professionals explore international education and career opportunities, with practical guidance from planning through pre-arrival.",
+    "DREAMVISION helps students and nurses explore study and registration pathways in New Zealand and Australia, with practical guidance through pre-arrival.",
 )
 
 ABOUT_STORY = """<div class="section">
   <div class="wrap split split--wide-left">
     <div class="stack">
       <h2>Guidance built around your next step</h2>
-      <p>Choosing where to study or work abroad is a significant decision. DreamVision Education supports people exploring opportunities in New Zealand, Australia and the UK, helping them understand the options and prepare for what comes next.</p>
-      <p>Our services include study guidance, pre-arrival preparation, New Zealand nursing registration support, and international work pathways. We aim to make the process clearer, more considered and better matched to each person's goals.</p>
+      <p>Choosing where to study or pursue nursing registration is a significant decision. DREAMVISION supports people exploring opportunities in New Zealand and Australia, helping them understand the options and prepare for what comes next.</p>
+      <p>Our services include study in New Zealand and Australia, pre-arrival services, nursing registration support, ANMAC assessment, and Australian and New Zealand PR and visa pathway support.</p>
     </div>
     <aside class="note note--jade">
       <p><strong>Our promise</strong></p>
@@ -655,8 +606,8 @@ ABOUT_TEAM = """<div class="section section--mist">
 
 page(
     "about.html",
-    "About Us | DREAMVISION EDUCATION",
-    "DreamVision Education supports study, work, pre-arrival and New Zealand nursing registration pathways.",
+    "About Us | DREAMVISION",
+    "DREAMVISION supports study, pre-arrival, nursing registration, ANMAC assessment and visa pathways in Australia and New Zealand.",
     "about.html", "",
     ABOUT_HERO + ABOUT_STORY + ABOUT_VALUES + ABOUT_TEAM,
 )
@@ -712,8 +663,8 @@ CAREER_APPLY = """<div class="section">
 
 page(
     "career.html",
-    "Careers | DREAMVISION EDUCATION",
-    "Explore career opportunities with DreamVision Education, supporting international education and career pathways.",
+    "Careers | DREAMVISION",
+    "Explore career opportunities with DREAMVISION, supporting study and nursing pathways in Australia and New Zealand.",
     "career.html", "",
     CAREER_HERO + CAREER_ROLES + CAREER_WHY + CAREER_APPLY,
 )
@@ -757,8 +708,8 @@ FAQ_FEES = accordion([
 
 page(
     "faq.html",
-    "FAQ | DREAMVISION EDUCATION",
-    "Answers to common questions about international study, work, pre-arrival and New Zealand nursing support.",
+    "FAQ | DREAMVISION",
+    "Answers to common questions about study, pre-arrival, nursing registration and visa support in Australia and New Zealand.",
     "faq.html", "",
     FAQ_HERO + '<div class="section"><div class="wrap wrap--narrow">' + FAQ_GENERAL + FAQ_OET + FAQ_IQN + FAQ_OSCE + FAQ_FEES + '</div></div>',
 )
@@ -775,10 +726,12 @@ CONTACT_BODY = """<div class="section">
     <div>
       <h2>Get in touch</h2>
       <ul class="contact-list">
-        <li><span class="ic">{phone}</span><div><b>Call or WhatsApp</b><a data-tel data-tel-text href="#">+91 81578 19376</a></div></li>
+        <li><span class="ic">{phone}</span><div><b>Australia</b><a data-phone-australia href="tel:+61450719376">+61 450 719 376</a></div></li>
+        <li><span class="ic">{phone}</span><div><b>India</b><a data-phone-india href="tel:+919656219376">+91 96562 19376</a></div></li>
         <li><span class="ic">{mail}</span><div><b>Email</b><a data-email data-email-text href="#">info@dreamvisionedu.au</a></div></li>
-        <li><span class="ic">{pin}</span><div><b>Kerala office</b><span data-addr-india>First Floor, Jacob Tower, Post Office Junction, Muvattupuzha, Kerala 686661</span></div></li>
-        <li><span class="ic">{pin}</span><div><b>Australia office</b><span data-addr-nz>Sandown Road, Launceston, Tasmania, Australia</span></div></li>
+        <li><span class="ic">{pin}</span><div><b>Melbourne office</b><span data-address-australia>140 William Street Melbourne Victoria Australia</span></div></li>
+        <li><span class="ic">{pin}</span><div><b>Muvattupuzha office</b><span data-address-muvattupuzha>First Floor, Jacob Tower, Post Office Junction, Muvattupuzha, Kerala 686661</span></div></li>
+        <li><span class="ic">{pin}</span><div><b>Kannur office</b><span data-address-kannur>JHF Arcade, Pamban Madhavan Rd, Talap, Kannur, Keralam 670002, India</span></div></li>
         <li><span class="ic">{clock}</span><div><b>Hours</b><span data-hours>Mon &ndash; Sat, 9:00 am &ndash; 6:00 pm IST</span></div></li>
       </ul>
       <div class="social" style="margin-top:2rem">
@@ -797,10 +750,12 @@ CONTACT_BODY = """<div class="section">
           <label for="f-course">Which service can we help with?</label>
           <select id="f-course" name="course">
             <option>Study in New Zealand</option>
+            <option>Study in Australia</option>
             <option>Pre-arrival services</option>
             <option>New Zealand nursing registration</option>
-            <option>Work in New Zealand or Australia</option>
-            <option>Other / not sure yet</option>
+            <option>Australian nursing registration</option>
+            <option>ANMAC assessment</option>
+            <option>Australian and New Zealand PR support and visa-related support</option>
           </select>
         </div>
         <div class="field form__full"><label for="f-msg">Message <span class="opt">(optional)</span></label><textarea id="f-msg" name="message" placeholder="Tell us where you're at — e.g. exam status, target intake"></textarea></div>
@@ -818,8 +773,8 @@ CONTACT_BODY = """<div class="section">
 
 page(
     "contact.html",
-    "Contact Us | DREAMVISION EDUCATION",
-    "Contact DreamVision Education about study, work, pre-arrival and New Zealand nursing support.",
+    "Contact Us | DREAMVISION",
+    "Contact DREAMVISION about study, pre-arrival, nursing registration, ANMAC assessment and visa support.",
     "contact.html", "",
     CONTACT_HERO + CONTACT_BODY,
 )
@@ -834,7 +789,7 @@ POSTS = [
         "desc": "How the Nursing Council of New Zealand assesses internationally qualified nurses since its 2023 changes: the IQN theory exam, the orientation course, and the OSCE.",
         "excerpt": "Since December 2023, NCNZ tests competence directly instead of relying mainly on paperwork. Here's exactly what that means for your application.",
         "body": """
-<p>If you qualified as a nurse outside New Zealand, the route to registration changed in a meaningful way from 4 December 2023. Where the Nursing Council of New Zealand (NCNZ) previously leaned heavily on document review and Competence Assessment Programmes, it now directly tests a nurse's competence to practise &mdash; an approach already used in Australia, the UK and Canada.</p>
+<p>If you qualified as a nurse outside New Zealand, the route to registration changed in a meaningful way from 4 December 2023. Where the Nursing Council of New Zealand (NCNZ) previously leaned heavily on document review and Competence Assessment Programmes, it now directly tests a nurse's competence to practise.</p>
 <h2>The two-part competence assessment</h2>
 <p>If NCNZ directs you to complete a competence assessment, you'll need to pass both of the following:</p>
 <ul>
@@ -895,7 +850,7 @@ POSTS = [
   <li>Hands-on familiarisation with the clinical equipment and the OSCE's station format, so exam day isn't the first time you've seen the setup.</li>
 </ul>
 <h2>The OSCE itself</h2>
-<p>The objective structured clinical examination takes around three hours and is held at an accredited simulation and assessment centre in Christchurch. It's built from a series of timed stations, each simulating a specific clinical scenario and testing a particular skill &mdash; a format used internationally for assessing nurses and doctors since the 1970s, including in Australia, Canada and the UK.</p>
+<p>The objective structured clinical examination takes around three hours and is held at an accredited simulation and assessment centre in Christchurch. It's built from a series of timed stations, each simulating a specific clinical scenario and testing a particular skill &mdash; a format used internationally for assessing nurses and doctors since the 1970s.</p>
 <p>What examiners are scoring isn't just clinical accuracy. Communication, escalation, and culturally safe practice are assessed alongside your hands-on skills at each station.</p>
 <h2>How to prepare before you fly</h2>
 <p>Because the OPC and OSCE both happen in New Zealand, the highest-value preparation happens before you leave home: station-by-station simulation drills, structured communication practice, and full mock OSCEs under time pressure. Done well, the two days in New Zealand should feel like a repeat of something you've already rehearsed, not a first attempt.</p>
@@ -916,7 +871,7 @@ BLOG_HERO = page_hero(
 
 page(
     "blog.html",
-    "Blog | DREAMVISION EDUCATION",
+    "Blog | DREAMVISION",
     "Articles on NCNZ's IQN, OSCE and OET/IELTS pathway for internationally qualified nurses moving to New Zealand.",
     "blog.html", "",
     BLOG_HERO + '<div class="section"><div class="wrap"><div class="posts">' + POST_CARDS + '</div></div></div>',
@@ -934,7 +889,7 @@ for p in POSTS:
     </div></div>"""
     page(
         "blog/" + p["slug"] + ".html",
-        p["title"] + " | DREAMVISION EDUCATION Blog",
+        p["title"] + " | DREAMVISION Blog",
         p["desc"],
         "blog.html", "../",
         body,

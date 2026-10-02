@@ -1,4 +1,4 @@
-# DREAMVISION EDUCATION — website
+# DREAMVISION — website
 
 Plain HTML / CSS / JS. No build step, no framework — open any `.html` file
 directly, or better, serve the folder with VS Code's **Live Server**
@@ -12,12 +12,13 @@ edit it once and every page updates:
 
 ```js
 window.KNA = {
-  whatsapp: "918157819376",   // digits only, country code first, no + or spaces
-  phone: "+918157819376",
-  phoneDisplay: "+91 81578 19376",
+  whatsapp: "919656219376",   // digits only, country code first, no + or spaces
+  phoneAustralia: "+61450719376",
+  phoneIndia: "+919656219376",
   email: "info@dreamvisionedu.au",
-  addressIndia: "...",
-  addressNZ: "...",
+  addressAustralia: "...",
+  addressMuvattupuzha: "...",
+  addressKannur: "...",
   hours: "...",
   social: { instagram: "...", facebook: "...", youtube: "...", linkedin: "..." }
 };
@@ -45,7 +46,7 @@ assets/
   css/style.css              Single stylesheet, everything is in here
   js/config.js                Your contact details (edit this)
   js/site.js                  Nav, forms, score-checker logic — shouldn't need editing
-  img/topo.svg, favicon.svg
+  img/topo.svg, logo/logo.png, favicon/*
 ```
 
 ## 3. Things clearly marked as placeholders — replace before launch
@@ -56,7 +57,7 @@ Search the site for these and swap in real content:
 - **Testimonials** — `index.html`, the "What candidates say" section
 - **Fees** — `faq.html`, the "Fees & logistics" group
 - **Job openings** — `career.html`
-- **Addresses** — India centre / NZ address in `config.js`
+- **Addresses** — Australia, Muvattupuzha and Kannur in `config.js`
 - **Social links** — real Instagram/Facebook/YouTube/LinkedIn URLs in `config.js`
 
 ## 4. The enquiry forms (Contact + Career)
