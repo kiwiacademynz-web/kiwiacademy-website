@@ -179,7 +179,7 @@
         '</div>' +
         '<form class="assistant-composer"><label class="skip-link" for="assistant-input">Ask a question</label><input id="assistant-input" name="question" maxlength="500" placeholder="Type your question…" autocomplete="off" required><button class="assistant-send" type="submit">Ask</button></form>' +
       '</div>' +
-      '<button class="assistant-launcher" type="button" aria-expanded="false" aria-controls="assistant-panel"><span class="assistant-launcher__status" aria-hidden="true"></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-5 4v-4.8a2.5 2.5 0 0 1-1-2z"/><path d="M8 8h8M8 11.5h5"/></svg><span>Ask us</span></button>';
+      '<button class="assistant-launcher" type="button" aria-expanded="false" aria-controls="assistant-panel"><span class="assistant-launcher__status" aria-hidden="true"></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-5 4v-4.8a2.5 2.5 0 0 1-1-2z"/><path d="M8 8h8M8 11.5h5"/></svg><span>Ask Me</span></button>';
     document.body.appendChild(assistant);
 
     var panel = assistant.querySelector(".assistant-panel");
