@@ -49,7 +49,7 @@ best-nclex-rn-training-in-kerala.html
 assets/
   css/style.css              Single stylesheet, everything is in here
   js/config.js                Your contact details (edit this)
-  js/site.js                  Nav, forms, score-checker logic — shouldn't need editing
+  js/site.js                  Nav, forms, score checker and website assistant
   img/topo.svg, logo/logo.png, favicon/*
 ```
 
@@ -64,17 +64,25 @@ Search the site for these and swap in real content:
 - **Addresses** — Australia, Muvattupuzha and Kannur in `config.js`
 - **Social links** — real Instagram/Facebook/YouTube/LinkedIn URLs in `config.js`
 
-## 4. The enquiry forms (Contact + Career)
+## 4. Enquiry forms and website assistant
 
-Both forms currently work client-side only: on submit, they show a
-confirmation message and reveal a **"Continue on WhatsApp"** button
-pre-filled with the person's details. To actually receive submissions by
-email or into a CRM, you'll need to either:
-- point the `<form>` at a form backend (e.g. Formspree, Web3Forms), or
-- wire up a small serverless function / backend endpoint.
+The Contact and Career forms open WhatsApp with the submitted details
+pre-filled. The visitor must tap **Send** in WhatsApp; the website cannot
+send a WhatsApp message silently.
 
-The WhatsApp handoff works immediately with no setup, since it's just a
-`wa.me` link built from `config.js`.
+The floating website assistant gives conversational preset answers from
+`assets/js/site.js` about courses, exam pathways, AHPRA, fees and contact
+options. It uses a warm tone but identifies itself as a virtual assistant. It
+does not collect enquiry details or send messages. Questions outside the
+assistant's covered topics are directed to customer support.
+
+It is a rules-based assistant, not an AI service; it does not send visitor data
+to an AI provider or retain the conversation on a server. Keep its answers
+aligned with the current site and official regulator information when updating
+course requirements.
+
+The home page impact metrics count up when they become visible. Visitors who
+prefer reduced motion see the final values without the animation.
 
 ## 5. Colours & fonts, if you want to adjust the look
 

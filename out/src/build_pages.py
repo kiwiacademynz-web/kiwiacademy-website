@@ -220,9 +220,9 @@ HOME_METRICS = """<section class="section metrics-section" aria-labelledby="metr
       <h2 id="metrics-title">Guidance trusted by students and professionals.</h2>
     </div>
     <dl class="metrics-grid">
-      <div class="metric"><dt>1500+</dt><dd>Satisfied customers</dd></div>
-      <div class="metric"><dt>250+</dt><dd>Student visas</dd></div>
-      <div class="metric"><dt>99.9%</dt><dd>Satisfaction</dd></div>
+      <div class="metric"><dt data-count="1500" data-count-suffix="+">1500+</dt><dd>Satisfied customers</dd></div>
+      <div class="metric"><dt data-count="250" data-count-suffix="+">250+</dt><dd>Student visas</dd></div>
+      <div class="metric"><dt data-count="99.9" data-count-suffix="%" data-count-decimals="1">99.9%</dt><dd>Satisfaction</dd></div>
     </dl>
   </div>
 </section>"""
