@@ -116,6 +116,7 @@ strong { font-weight: 700; }
 .brand__mark { width: 2.5rem; height: 2.5rem; flex: none; border-radius: 6px; background: var(--kowhai); color: var(--fiord-deep); display: grid; place-items: center; font: 800 1.5rem/1 var(--font-display); }
 .brand__logo { display: block; width: 3rem; height: 3rem; flex: none; object-fit: contain; }
 .brand__name { font: 800 1.1rem/1 var(--font-display); color: var(--fiord); }
+.brand__text { display: flex; flex-direction: column; gap: .2rem; }
 .brand small { display: block; font-family: var(--font-body); font-weight: 700; font-size: .68rem; letter-spacing: .08em; color: var(--muted); margin-top: .22rem; }
 .nav { display: flex; align-items: center; gap: .25rem; }
 .nav a, .nav__btn {

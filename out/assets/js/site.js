@@ -143,16 +143,22 @@
         var status = form.querySelector(".form__status");
         if (!form.checkValidity()) { form.reportValidity(); return; }
         var data = new FormData(form);
-        var summary = "New enquiry — " + (data.get("name") || "") + " (" + (data.get("course") || "general") + ")";
-        if (status) {
-          status.textContent = "Thanks — your enquiry is ready to send. Connect this form to your email/CRM to go live, or tap \u201cContinue on WhatsApp\u201d below.";
+        var fields = [
+          ["Name", data.get("name")],
+          ["Phone / WhatsApp", data.get("phone")],
+          ["Email", data.get("email")],
+          ["Service / role", data.get("course")],
+          ["Message", data.get("message")]
+        ];
+        var msg = "Kia ora, I'd like to get in touch with DREAMVISION.\n\n" +
+          fields.filter(function (field) { return field[1] && String(field[1]).trim(); })
+            .map(function (field) { return field[0] + ": " + String(field[1]).trim(); })
+            .join("\n");
+        if (!C.whatsapp) {
+          if (status) status.textContent = "WhatsApp is not configured. Please contact us by phone or email.";
+          return;
         }
-        var waBtn = form.querySelector("[data-wa-submit]");
-        if (waBtn) {
-          var msg = "Kia ora, I'm " + (data.get("name") || "") + ". I'm interested in " + (data.get("course") || "your courses") + ". " + (data.get("message") || "");
-          waBtn.href = "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(msg);
-          waBtn.hidden = false;
-        }
+        window.location.href = "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(msg);
       });
     });
   }

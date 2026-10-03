@@ -38,10 +38,14 @@ blog/
   oet-vs-ielts-for-nurses.html
   what-happens-at-the-osce.html
 courses/
-  index.html                 Compare all 3 courses
+  index.html                 Compare all 4 courses
   iqn-training.html
   osce-training.html
   oet-preparation.html        (has the interactive OET/IELTS score checker)
+best-oet-training-in-kerala.html
+best-iqn-training-in-kerala.html
+best-osce-training-in-kerala.html
+best-nclex-rn-training-in-kerala.html
 assets/
   css/style.css              Single stylesheet, everything is in here
   js/config.js                Your contact details (edit this)

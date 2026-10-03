@@ -653,8 +653,7 @@ CAREER_APPLY = """<div class="section">
       </div>
       <div class="form__foot">
         <button class="btn btn--jade" type="submit">Send application</button>
-        <a class="btn btn--kowhai" data-wa data-wa-submit hidden href="#">Continue on WhatsApp</a>
-        <p>We'll get back to you within a few working days.</p>
+        <p>Submitting opens WhatsApp with your application details ready to send.</p>
       </div>
       <p class="form__status" aria-live="polite"></p>
     </form>
@@ -762,8 +761,7 @@ CONTACT_BODY = """<div class="section">
       </div>
       <div class="form__foot">
         <button class="btn btn--jade" type="submit">Send enquiry</button>
-        <a class="btn btn--kowhai" data-wa data-wa-submit hidden href="#">Continue on WhatsApp</a>
-        <p>We'll respond the same working day wherever possible.</p>
+        <p>Submitting opens WhatsApp with your enquiry details ready to send.</p>
       </div>
       <p class="form__status" aria-live="polite"></p>
     </form>
