@@ -20,7 +20,11 @@ window.KNA = {
   addressMuvattupuzha: "...",
   addressKannur: "...",
   hours: "...",
-  social: { instagram: "...", facebook: "...", youtube: "...", linkedin: "..." }
+  social: {
+    facebook: "https://www.facebook.com/dreamvision",
+    instagram: "https://www.instagram.com/dreamvision_education/",
+    youtube: "https://www.youtube.com/@Dreamvisioneducation"
+  }
 };
 ```
 
@@ -33,6 +37,11 @@ career.html
 faq.html
 contact.html
 blog.html                   Blog index
+study-in-new-zealand.html
+pre-arrival-services.html
+nz-nursing-registration.html
+au-nursing-registration.html
+vidyarambha-offer.html
 blog/
   ncnz-competence-pathway-explained.html
   oet-vs-ielts-for-nurses.html
@@ -81,6 +90,11 @@ to an AI provider or retain the conversation on a server. Keep its answers
 aligned with the current site and official regulator information when updating
 course requirements.
 
+The site-wide cookie banner saves necessary, analytics and course-information
+choices in browser local storage. Necessary storage is always enabled. No
+analytics or course-information tracking scripts are currently included; any
+such integrations must check the saved choice before loading.
+
 The home page impact metrics count up when they become visible. Visitors who
 prefer reduced motion see the final values without the animation.
 
@@ -93,8 +107,7 @@ updates sitewide.
 ## 6. `src/` folder (not part of the live site)
 
 `src/build.py` and `src/build_pages.py` are the Python scripts used to
-generate these HTML files with a consistent header/footer/nav, so you
-never had to hand-copy the header into 13 files. You don't need Python to
+generate these HTML files with a consistent header/footer/nav. You don't need Python to
 edit the site day-to-day — just edit the HTML/CSS/JS in `out/` directly
 like any static site. Only touch `src/` if you want to regenerate pages
 from templates instead of hand-editing HTML.

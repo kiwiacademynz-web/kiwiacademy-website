@@ -12,5 +12,9 @@ window.KNA = {
   addressMuvattupuzha: "First Floor, Jacob Tower, Post Office Junction, Muvattupuzha, Kerala 686661",
   addressKannur: "JHF Arcade, Pamban Madhavan Rd, Talap, Kannur, Keralam 670002, India",
   hours: "Mon – Sat, 9:00 am – 6:00 pm IST",
-  social: {}
+  social: {
+    facebook: "https://www.facebook.com/dreamvision",
+    instagram: "https://www.instagram.com/dreamvision_education/",
+    youtube: "https://www.youtube.com/@Dreamvisioneducation"
+  }
 };

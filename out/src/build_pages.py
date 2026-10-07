@@ -235,11 +235,11 @@ HOME_SERVICES = """<section class="section home-services" id="services">
       <p>Whether you're planning to study or pursue nursing registration, we'll help you understand the options and move forward with confidence.</p>
     </div>
     <div class="service-grid">
-      <a class="service-card" href="contact.html"><span class="service-card__num">01</span><h3>Study in New Zealand</h3><p>Explore education options and plan your New Zealand study pathway.</p><span class="service-card__link">Explore study options <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="study-in-new-zealand.html"><span class="service-card__num">01</span><h3>Study in New Zealand</h3><p>Explore education options and plan your New Zealand study pathway.</p><span class="service-card__link">Explore study options <span aria-hidden="true">&rarr;</span></span></a>
       <a class="service-card" href="contact.html"><span class="service-card__num">02</span><h3>Study in Australia</h3><p>Get guidance on Australian study options and the application process.</p><span class="service-card__link">Explore study options <span aria-hidden="true">&rarr;</span></span></a>
-      <a class="service-card" href="contact.html"><span class="service-card__num">03</span><h3>Pre-arrival services</h3><p>Prepare for your move with practical planning and settling-in support.</p><span class="service-card__link">Plan your arrival <span aria-hidden="true">&rarr;</span></span></a>
-      <a class="service-card" href="courses/index.html"><span class="service-card__num">04</span><h3>New Zealand nursing registration</h3><p>Understand the registration pathway and prepare for its assessment stages.</p><span class="service-card__link">Explore registration support <span aria-hidden="true">&rarr;</span></span></a>
-      <a class="service-card" href="contact.html"><span class="service-card__num">05</span><h3>Australian nursing registration</h3><p>Get guidance on registration requirements and your next steps in Australia.</p><span class="service-card__link">Explore registration support <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="pre-arrival-services.html"><span class="service-card__num">03</span><h3>Pre-arrival services</h3><p>Prepare for your move with practical planning and settling-in support.</p><span class="service-card__link">Plan your arrival <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="nz-nursing-registration.html"><span class="service-card__num">04</span><h3>New Zealand nursing registration</h3><p>Understand the registration pathway and prepare for its assessment stages.</p><span class="service-card__link">Explore registration support <span aria-hidden="true">&rarr;</span></span></a>
+      <a class="service-card" href="au-nursing-registration.html"><span class="service-card__num">05</span><h3>Australian nursing registration</h3><p>Get guidance on registration requirements and your next steps in Australia.</p><span class="service-card__link">Explore registration support <span aria-hidden="true">&rarr;</span></span></a>
       <a class="service-card" href="contact.html"><span class="service-card__num">06</span><h3>ANMAC assessment</h3><p>Get support to understand and prepare for your ANMAC skills assessment.</p><span class="service-card__link">Discuss your assessment <span aria-hidden="true">&rarr;</span></span></a>
       <a class="service-card" href="contact.html"><span class="service-card__num">07</span><h3>Australian and New Zealand PR and visa support</h3><p>Get support with permanent residency pathways and visa-related processes.</p><span class="service-card__link">Discuss your pathway <span aria-hidden="true">&rarr;</span></span></a>
     </div>
@@ -261,7 +261,14 @@ HOME_SERVICES = """<section class="section home-services" id="services">
   </div>
 </section>"""
 
-HOME_BODY = HOME_HERO + HOME_METRICS + HOME_SERVICES + HOME_APPROACH
+HOME_OFFER_POPUP = """<dialog class="offer-popup" id="vidyarambha-offer-popup" aria-label="Vidyarambha offer">
+  <button class="offer-popup__close" type="button" data-offer-close aria-label="Close offer">&times;</button>
+  <a class="offer-popup__image-link" href="vidyarambha-offer.html" aria-label="View the Vidyarambha offer">
+    <img class="offer-popup__image" src="assets/img/vidyarambha.jpg" alt="Vidyarambha offer">
+  </a>
+</dialog>"""
+
+HOME_BODY = HOME_HERO + HOME_METRICS + HOME_SERVICES + HOME_APPROACH + HOME_OFFER_POPUP
 
 page(
     "index.html",
@@ -775,6 +782,123 @@ page(
     "Contact DREAMVISION about study, pre-arrival, nursing registration, ANMAC assessment and visa support.",
     "contact.html", "",
     CONTACT_HERO + CONTACT_BODY,
+)
+
+# ============================================================ SERVICE PAGES
+STUDY_NZ_HERO = page_hero(
+    '<a href="index.html">Home</a><span>/</span>Study in New Zealand',
+    "Study in New Zealand",
+    "Explore study options and plan your application, visa preparation and arrival with practical guidance shaped around your goals.",
+    ["Study planning", "Application guidance", "Arrival support"],
+)
+page(
+    "study-in-new-zealand.html",
+    "Study in New Zealand | DREAMVISION",
+    "Explore study options in New Zealand with guidance on course planning, student visa preparation, family plans and settling in.",
+    "study-in-new-zealand.html", "",
+    STUDY_NZ_HERO + """<section class="section"><div class="wrap split"><div class="stack">
+  <h2>Understand your options before you apply</h2>
+  <p>We can help you clarify your study goals, explore suitable options and organise the steps involved in preparing an application.</p>
+  <ul class="tick-list"><li>Discuss your goals, background and preferred location.</li><li>Prepare the documents and application steps requested by your chosen provider.</li><li>Organise student visa application materials and plan for family members.</li><li>Prepare practical arrangements for arrival and settling in.</li></ul>
+  <p>Admission decisions and visa outcomes are made by education providers and New Zealand Immigration. Immigration advice should come from an appropriately licensed adviser.</p>
+</div><div class="stack"><h2>Official information</h2>
+  <p><a href="https://www.studywithnewzealand.govt.nz/" target="_blank" rel="noopener noreferrer">Explore official study information for New Zealand</a></p>
+  <p><a href="https://www.immigration.govt.nz/" target="_blank" rel="noopener noreferrer">Check visa information with Immigration New Zealand</a></p>
+  <a class="btn btn--jade" href="contact.html">Discuss study options</a>
+</div></div></section>""",
+)
+
+PRE_ARRIVAL_HERO = page_hero(
+    '<a href="index.html">Home</a><span>/</span>Pre-arrival services',
+    "Pre-arrival services",
+    "Prepare for your move to Australia or New Zealand with practical travel planning and arrival support.",
+    ["Travel preparation", "Accommodation planning", "Arrival and settlement"],
+)
+page(
+    "pre-arrival-services.html",
+    "Pre-arrival Services | DREAMVISION",
+    "Get practical pre-arrival support with accommodation, travel planning, airport pickup and settling-in preparation for Australia or New Zealand.",
+    "pre-arrival-services.html", "",
+    PRE_ARRIVAL_HERO + """<section class="section"><div class="wrap">
+  <div class="section-head"><h2>Make the move feel manageable</h2><p>Support depends on your destination, timing and needs. We can help you prepare for practical details around departure and arrival.</p></div>
+  <div class="service-grid">
+    <article class="service-card"><h3>Visa preparation</h3><p>Organise application documents. Visa advice and decisions must come from the relevant authority or a licensed adviser.</p></article>
+    <article class="service-card"><h3>Accommodation</h3><p>Explore student housing, shared accommodation or temporary stays.</p></article>
+    <article class="service-card"><h3>Pre-departure guidance</h3><p>Prepare for travel essentials, packing, money and local customs.</p></article>
+    <article class="service-card"><h3>Flight planning</h3><p>Compare travel options around your confirmed dates.</p></article>
+    <article class="service-card"><h3>Airport pickup</h3><p>Discuss arrival transport so you know how you will reach your accommodation.</p></article>
+    <article class="service-card"><h3>Orientation and settling in</h3><p>Learn about practical first steps such as transport, banking and healthcare.</p></article>
+  </div>
+</div></section>""",
+)
+
+NZ_REGISTRATION_HERO = page_hero(
+    '<a href="index.html">Home</a><span>/</span>New Zealand nursing registration',
+    "New Zealand nursing registration",
+    "Understand the key stages the Nursing Council of New Zealand may require when assessing internationally qualified nurses.",
+    ["Individual assessment", "Credential verification", "Competence requirements vary"],
+)
+page(
+    "nz-nursing-registration.html",
+    "New Zealand Nursing Registration | DREAMVISION",
+    "Understand the New Zealand internationally qualified nurse registration pathway, from TruMerit document verification to Nursing Council assessment.",
+    "nz-nursing-registration.html", "",
+    NZ_REGISTRATION_HERO + """<section class="section"><div class="wrap">
+  <div class="section-head"><h2>Follow the current Nursing Council instructions</h2><p>Applications are assessed individually. Your requirements depend on your education, registration and experience, so use the Council's current instructions as the source of truth.</p></div>
+  <ol class="routes routes--steps">
+    <li class="route"><div><h3>Verify your documents</h3><p class="route__for">Use the verification provider currently specified by NCNZ.</p></div><div><p>The Council's IQN pathway refers applicants to TruMerit for credential verification. Follow current instructions for documents from education providers and regulators.</p></div></li>
+    <li class="route"><div><h3>Apply to NCNZ</h3><p class="route__for">Submit your application and supporting evidence.</p></div><div><p>Prepare identity, qualification, registration, English-language and practice evidence as applicable. The Council may request more information.</p></div></li>
+    <li class="route"><div><h3>Complete any required assessment</h3><p class="route__for">NCNZ determines any competence requirements.</p></div><div><p>Additional learning, theoretical or clinical competence assessments may apply. Follow the Council's decision for your pathway and sequence.</p></div></li>
+    <li class="route"><div><h3>Meet final requirements</h3><p class="route__for">Registration follows after all applicable requirements are satisfied.</p></div><div><p>Confirm final requirements and registration steps directly with NCNZ. Employment and registration are separate matters.</p></div></li>
+  </ol>
+  <p><a href="https://www.nursingcouncil.org.nz/IQN" target="_blank" rel="noopener noreferrer">NCNZ: internationally qualified nurses</a></p>
+</div></section>""",
+)
+
+AU_REGISTRATION_HERO = page_hero(
+    '<a href="index.html">Home</a><span>/</span>Australian nursing registration',
+    "Australian nursing registration",
+    "Explore the general registration steps for internationally qualified nurses seeking to practise in Australia.",
+    ["Start with Ahpra's self-check", "Assessment depends on your background", "Regulator decides registration"],
+)
+page(
+    "au-nursing-registration.html",
+    "Australian Nursing Registration | DREAMVISION",
+    "Explore the Australian registration pathway for internationally qualified nurses, beginning with the official Ahpra self-check.",
+    "au-nursing-registration.html", "",
+    AU_REGISTRATION_HERO + """<section class="section"><div class="wrap">
+  <div class="section-head"><h2>Understand the process before you apply</h2><p>Ahpra and the Nursing and Midwifery Board of Australia assess internationally qualified nurses under the applicable pathway. Requirements vary with your qualifications and circumstances.</p></div>
+  <ol class="routes routes--steps">
+    <li class="route"><div><h3>Complete the official self-check</h3><p class="route__for">Start with the Ahpra portal.</p></div><div><p>The self-check helps identify how your qualifications may be assessed and which pathway applies.</p></div></li>
+    <li class="route"><div><h3>Follow the assessment pathway</h3><p class="route__for">Complete the stages identified by Ahpra and the NMBA.</p></div><div><p>Assessment, examination and English-language requirements depend on the pathway. Check current NMBA instructions.</p></div></li>
+    <li class="route"><div><h3>Prepare your application</h3><p class="route__for">Submit the documents required for your case.</p></div><div><p>These may include identity, qualification, registration, English-language and criminal history evidence, along with certified or translated documents.</p></div></li>
+    <li class="route"><div><h3>Meet registration standards</h3><p class="route__for">The regulator decides whether requirements are met.</p></div><div><p>Confirm current standards, fees and document requirements directly with Ahpra and the NMBA.</p></div></li>
+  </ol>
+  <p><a href="https://portal.ahpra.gov.au/portal/s/self-check" target="_blank" rel="noopener noreferrer">Complete the Ahpra self-check</a></p>
+  <p><a href="https://www.ahpra.gov.au/Registration/International-practitioners.aspx" target="_blank" rel="noopener noreferrer">Ahpra: international practitioners</a></p>
+</div></section>""",
+)
+
+VIDYARAMBHA_HERO = page_hero(
+    '<a href="index.html">Home</a><span>/</span>Vidyarambha Offer',
+    "Vidyarambha Offer",
+    "Contact our team to learn about the current offer details and eligibility.",
+)
+page(
+    "vidyarambha-offer.html",
+    "Vidyarambha Offer | DREAMVISION",
+    "Learn more about the DREAMVISION Vidyarambha offer and contact our team for current details and eligibility.",
+    "vidyarambha-offer.html", "",
+    VIDYARAMBHA_HERO + """<section class="section"><div class="wrap split split--wide-left">
+  <div class="stack"><img src="assets/img/vidyarambha.jpg" alt="Vidyarambha celebration illustration" style="display:block;width:100%;height:auto;border-radius:var(--r-m)">
+    <p>Offer availability, terms and eligibility may vary. Our team will confirm current details with you before you proceed.</p>
+  </div>
+  <div class="stack"><p class="eyebrow">Speak with our team</p><h2>Ask us about the Vidyarambha Offer</h2>
+    <p>Send us a message and we will share the latest information about this offer and the next steps relevant to you.</p>
+    <a class="btn btn--jade" data-wa data-wa-msg="Hello, I'd like to know more about the Vidyarambha offer, including current details and eligibility." href="#">Ask about the offer</a>
+    <p><a href="contact.html">Prefer to contact us another way?</a></p>
+  </div>
+</div></section>""",
 )
 
 # ============================================================ BLOG POSTS (content)

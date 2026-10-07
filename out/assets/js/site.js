@@ -8,6 +8,32 @@
   /* ---- wire up every data-wa / data-tel / data-email link ---- */
   function wireContactLinks() {
     var waMsg = "Hello, I'd like to learn more about DREAMVISION's services.";
+    var socialIcons = {
+      instagram: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>',
+      facebook: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-7h2.4l.4-3H14V9c0-.9.2-1.5 1.6-1.5H17V4.8c-.3 0-1.2-.1-2.2-.1-2.3 0-3.8 1.4-3.8 3.9V11H8.6v3H11v7h3z"/></svg>',
+      youtube: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg>'
+    };
+    var socialLabels = { instagram: "Instagram", facebook: "Facebook", youtube: "YouTube" };
+    var socialContainer = document.querySelector(".site-footer .social") ||
+      (function () {
+        var footerBrand = document.querySelector(".site-footer .footer__grid > div:first-child");
+        if (!footerBrand) return null;
+        var container = document.createElement("div");
+        container.className = "social";
+        footerBrand.appendChild(container);
+        return container;
+      }());
+    if (socialContainer) {
+      Object.keys(socialIcons).forEach(function (network) {
+        if (socialContainer.querySelector('[data-social="' + network + '"]')) return;
+        var link = document.createElement("a");
+        link.setAttribute("data-social", network);
+        link.setAttribute("aria-label", socialLabels[network]);
+        link.href = "#";
+        link.innerHTML = socialIcons[network];
+        socialContainer.appendChild(link);
+      });
+    }
     document.querySelectorAll("[data-wa]").forEach(function (el) {
       var msg = el.getAttribute("data-wa-msg") || waMsg;
       el.href = "https://wa.me/" + C.whatsapp + "?text=" + encodeURIComponent(msg);
@@ -404,6 +430,142 @@
     metrics.forEach(function (metric) { observer.observe(metric); });
   }
 
+  function wireHomeOfferPopup() {
+    var popup = document.querySelector("#vidyarambha-offer-popup");
+    if (!popup || typeof popup.showModal !== "function") return;
+    var closeButton = popup.querySelector("[data-offer-close]");
+    var storageKey = "dreamvision-vidyarambha-offer-seen-v2";
+    var alreadyShown = false;
+    try {
+      alreadyShown = window.localStorage.getItem(storageKey) === "1";
+    } catch (error) {
+      console.warn("The offer popup could not read its display preference from local storage.", error);
+    }
+    if (alreadyShown) return;
+
+    function markOfferSeen() {
+      try {
+        window.localStorage.setItem(storageKey, "1");
+      } catch (error) {
+        console.warn("The offer popup could not save its display preference to local storage.", error);
+      }
+    }
+
+    function showOffer() {
+      popup.showModal();
+      if (closeButton) closeButton.focus();
+    }
+
+    window.setTimeout(showOffer, 5000);
+
+    if (closeButton) closeButton.addEventListener("click", function () { popup.close(); });
+    popup.addEventListener("close", markOfferSeen);
+    popup.querySelector("a").addEventListener("click", markOfferSeen);
+    popup.addEventListener("click", function (event) {
+      if (event.target === popup) popup.close();
+    });
+  }
+
+  function wireCookieConsent() {
+    var storageKey = "dreamvision-cookie-consent-v1";
+    var consent;
+    try {
+      consent = JSON.parse(window.localStorage.getItem(storageKey) || "null");
+    } catch (error) {
+      console.warn("Cookie preferences could not be read from local storage.", error);
+    }
+    function showBanner(openPreferences) {
+      if (document.querySelector(".cookie-consent")) return;
+
+      var banner = document.createElement("section");
+      banner.className = "cookie-consent";
+      banner.setAttribute("aria-label", "Cookie choices");
+      banner.innerHTML =
+        '<div class="cookie-consent__inner">' +
+          '<div class="cookie-consent__copy">' +
+            '<h2>Cookies on this site</h2>' +
+            '<p>We use necessary cookies to run this site and remember your choices. You can choose whether to allow optional analytics and relevant course information cookies. Necessary cookies are always on because the site cannot work without them.</p>' +
+          '</div>' +
+          '<div class="cookie-consent__actions">' +
+            '<button class="cookie-consent__button" type="button" data-cookie-accept>Accept all</button>' +
+            '<button class="cookie-consent__button" type="button" data-cookie-reject>Reject all</button>' +
+            '<button class="cookie-consent__button cookie-consent__button--manage" type="button" data-cookie-manage aria-expanded="' + (openPreferences ? "true" : "false") + '">Manage preferences</button>' +
+          '</div>' +
+          '<div class="cookie-consent__preferences" data-cookie-preferences' + (openPreferences ? "" : " hidden") + '>' +
+            '<h3>Cookie preferences</h3>' +
+            '<fieldset class="cookie-consent__choices">' +
+              '<legend>Choose which optional cookies to allow</legend>' +
+              '<label class="cookie-consent__choice"><input type="checkbox" checked disabled> Necessary (always on)</label>' +
+              '<label class="cookie-consent__choice"><input type="checkbox" data-cookie-analytics' + (consent && consent.analytics ? " checked" : "") + '> Analytics</label>' +
+              '<label class="cookie-consent__choice"><input type="checkbox" data-cookie-course-info' + (consent && consent.courseInformation ? " checked" : "") + '> Relevant course information</label>' +
+            '</fieldset>' +
+            '<div class="cookie-consent__actions">' +
+              '<button class="cookie-consent__button" type="button" data-cookie-save>Save my choices</button>' +
+              '<button class="cookie-consent__button cookie-consent__button--manage" type="button" data-cookie-cancel>Cancel</button>' +
+            '</div>' +
+            '<p class="cookie-consent__error" data-cookie-error role="status" hidden>We could not save your choice in this browser. Check your browser storage settings and try again.</p>' +
+          '</div>' +
+        '</div>';
+      document.body.appendChild(banner);
+
+      var preferences = banner.querySelector("[data-cookie-preferences]");
+      var manageButton = banner.querySelector("[data-cookie-manage]");
+      var analyticsCheckbox = banner.querySelector("[data-cookie-analytics]");
+      var courseInfoCheckbox = banner.querySelector("[data-cookie-course-info]");
+      var errorMessage = banner.querySelector("[data-cookie-error]");
+
+      function savePreferences(allowOptional) {
+        var selection = {
+          necessary: true,
+          analytics: allowOptional ? analyticsCheckbox.checked : false,
+          courseInformation: allowOptional ? courseInfoCheckbox.checked : false
+        };
+        try {
+          window.localStorage.setItem(storageKey, JSON.stringify(selection));
+        } catch (error) {
+          console.warn("Cookie preferences could not be saved to local storage.", error);
+          errorMessage.hidden = false;
+          return;
+        }
+        consent = selection;
+        banner.remove();
+      }
+
+      banner.querySelector("[data-cookie-accept]").addEventListener("click", function () {
+        analyticsCheckbox.checked = true;
+        courseInfoCheckbox.checked = true;
+        savePreferences(true);
+      });
+      banner.querySelector("[data-cookie-reject]").addEventListener("click", function () {
+        savePreferences(false);
+      });
+      manageButton.addEventListener("click", function () {
+        var isOpen = !preferences.hidden;
+        preferences.hidden = isOpen;
+        manageButton.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      });
+      banner.querySelector("[data-cookie-save]").addEventListener("click", function () {
+        savePreferences(true);
+      });
+      banner.querySelector("[data-cookie-cancel]").addEventListener("click", function () {
+        preferences.hidden = true;
+        manageButton.setAttribute("aria-expanded", "false");
+      });
+    }
+
+    if (!consent || consent.necessary !== true) showBanner(false);
+    var footer = document.querySelector(".footer__bottom");
+    if (footer && !footer.querySelector("[data-cookie-settings]")) {
+      var settingsButton = document.createElement("button");
+      settingsButton.className = "footer__cookie-settings";
+      settingsButton.type = "button";
+      settingsButton.setAttribute("data-cookie-settings", "");
+      settingsButton.textContent = "Cookie settings";
+      settingsButton.addEventListener("click", function () { showBanner(true); });
+      footer.appendChild(settingsButton);
+    }
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     wireContactLinks();
     wireNav();
@@ -413,5 +575,7 @@
     wireAssistant();
     wireSectionReveals();
     wireMetricCounters();
+    wireHomeOfferPopup();
+    wireCookieConsent();
   });
 })();

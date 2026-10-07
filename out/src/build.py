@@ -17,11 +17,11 @@ SITE_NAME = "DREAMVISION"
 NAV = [
     ("index.html", "Home", None),
     ("courses/index.html", "Services", [
-      ("contact.html", "Study in New Zealand", "Education pathways"),
+      ("study-in-new-zealand.html", "Study in New Zealand", "Education pathways"),
       ("contact.html", "Study in Australia", "Education pathways"),
-      ("contact.html", "Pre-arrival services", "Prepare for your move"),
-      ("courses/index.html", "New Zealand nursing registration", "Registration support"),
-      ("contact.html", "Australian nursing registration", "Registration support"),
+      ("pre-arrival-services.html", "Pre-arrival services", "Prepare for your move"),
+      ("nz-nursing-registration.html", "New Zealand nursing registration", "Registration support"),
+      ("au-nursing-registration.html", "Australian nursing registration", "Registration support"),
       ("contact.html", "ANMAC assessment", "Assessment support"),
       ("contact.html", "Australian and New Zealand PR and visa support", "Pathway guidance"),
     ]),
@@ -117,7 +117,7 @@ def head(title, desc, base, canonical):
       },
     ],
   }, ensure_ascii=True)
-    return """<!doctype html>
+  return """<!doctype html>
 <html lang="en-AU">
 <head>
 <meta charset="utf-8">
@@ -214,11 +214,11 @@ def footer(base):
     <div>
       <h4>Services</h4>
       <ul>
-        <li><a href="{base}contact.html">Study in New Zealand</a></li>
+        <li><a href="{base}study-in-new-zealand.html">Study in New Zealand</a></li>
         <li><a href="{base}contact.html">Study in Australia</a></li>
-        <li><a href="{base}contact.html">Pre-arrival services</a></li>
-        <li><a href="{base}courses/index.html">New Zealand nursing registration</a></li>
-        <li><a href="{base}contact.html">Australian nursing registration</a></li>
+        <li><a href="{base}pre-arrival-services.html">Pre-arrival services</a></li>
+        <li><a href="{base}nz-nursing-registration.html">New Zealand nursing registration</a></li>
+        <li><a href="{base}au-nursing-registration.html">Australian nursing registration</a></li>
         <li><a href="{base}contact.html">ANMAC assessment</a></li>
         <li><a href="{base}contact.html">Australian and New Zealand PR and visa support</a></li>
       </ul>
