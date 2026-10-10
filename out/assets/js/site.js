@@ -430,42 +430,6 @@
     metrics.forEach(function (metric) { observer.observe(metric); });
   }
 
-  function wireHomeOfferPopup() {
-    var popup = document.querySelector("#vidyarambha-offer-popup");
-    if (!popup || typeof popup.showModal !== "function") return;
-    var closeButton = popup.querySelector("[data-offer-close]");
-    var storageKey = "dreamvision-vidyarambha-offer-seen-v2";
-    var alreadyShown = false;
-    try {
-      alreadyShown = window.localStorage.getItem(storageKey) === "1";
-    } catch (error) {
-      console.warn("The offer popup could not read its display preference from local storage.", error);
-    }
-    if (alreadyShown) return;
-
-    function markOfferSeen() {
-      try {
-        window.localStorage.setItem(storageKey, "1");
-      } catch (error) {
-        console.warn("The offer popup could not save its display preference to local storage.", error);
-      }
-    }
-
-    function showOffer() {
-      popup.showModal();
-      if (closeButton) closeButton.focus();
-    }
-
-    window.setTimeout(showOffer, 5000);
-
-    if (closeButton) closeButton.addEventListener("click", function () { popup.close(); });
-    popup.addEventListener("close", markOfferSeen);
-    popup.querySelector("a").addEventListener("click", markOfferSeen);
-    popup.addEventListener("click", function (event) {
-      if (event.target === popup) popup.close();
-    });
-  }
-
   function wireCookieConsent() {
     var storageKey = "dreamvision-cookie-consent-v1";
     var consent;
@@ -575,7 +539,6 @@
     wireAssistant();
     wireSectionReveals();
     wireMetricCounters();
-    wireHomeOfferPopup();
     wireCookieConsent();
   });
 })();

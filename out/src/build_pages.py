@@ -261,14 +261,7 @@ HOME_SERVICES = """<section class="section home-services" id="services">
   </div>
 </section>"""
 
-HOME_OFFER_POPUP = """<dialog class="offer-popup" id="vidyarambha-offer-popup" aria-label="Vidyarambha offer">
-  <button class="offer-popup__close" type="button" data-offer-close aria-label="Close offer">&times;</button>
-  <a class="offer-popup__image-link" href="vidyarambha-offer.html" aria-label="View the Vidyarambha offer">
-    <img class="offer-popup__image" src="assets/img/vidyarambha.jpg" alt="Vidyarambha offer">
-  </a>
-</dialog>"""
-
-HOME_BODY = HOME_HERO + HOME_METRICS + HOME_SERVICES + HOME_APPROACH + HOME_OFFER_POPUP
+HOME_BODY = HOME_HERO + HOME_METRICS + HOME_SERVICES + HOME_APPROACH
 
 page(
     "index.html",
