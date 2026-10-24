@@ -43,8 +43,14 @@
     document.querySelectorAll("[data-phone-australia]").forEach(function (el) {
       el.href = "tel:" + C.phoneAustralia;
     });
-    document.querySelectorAll("[data-phone-india]").forEach(function (el) {
-      el.href = "tel:" + C.phoneIndia;
+    document.querySelectorAll("[data-phone-muvattupuzha]").forEach(function (el) {
+      el.href = "tel:" + C.phoneMuvattupuzha;
+    });
+    document.querySelectorAll("[data-phone-kannur]").forEach(function (el) {
+      el.href = "tel:" + C.phoneKannur;
+    });
+    document.querySelectorAll("[data-phone-christchurch]").forEach(function (el) {
+      el.href = "tel:" + C.phoneChristchurch;
     });
     document.querySelectorAll("[data-email]").forEach(function (el) {
       el.href = "mailto:" + C.email;
@@ -59,6 +65,7 @@
     document.querySelectorAll("[data-address-australia]").forEach(function (el) { el.textContent = C.addressAustralia; });
     document.querySelectorAll("[data-address-muvattupuzha]").forEach(function (el) { el.textContent = C.addressMuvattupuzha; });
     document.querySelectorAll("[data-address-kannur]").forEach(function (el) { el.textContent = C.addressKannur; });
+    document.querySelectorAll("[data-address-christchurch]").forEach(function (el) { el.textContent = C.addressChristchurch; });
   }
 
   /* ---- mobile nav ---- */
@@ -246,10 +253,13 @@
       bubble.className = "assistant-message";
       bubble.appendChild(document.createTextNode("Customer support: "));
       appendAssistantLink(bubble, "mailto:" + C.email, C.email);
-      if (C.phoneIndia) appendAssistantLink(bubble, "tel:" + C.phoneIndia, C.phoneIndia);
+      if (C.phoneAustralia) appendAssistantLink(bubble, "tel:" + C.phoneAustralia, "Australia: " + C.phoneAustralia);
+      if (C.phoneMuvattupuzha) appendAssistantLink(bubble, "tel:" + C.phoneMuvattupuzha, "Muvattupuzha: " + C.phoneMuvattupuzha);
+      if (C.phoneKannur) appendAssistantLink(bubble, "tel:" + C.phoneKannur, "Kannur: " + C.phoneKannur);
+      if (C.phoneChristchurch) appendAssistantLink(bubble, "tel:" + C.phoneChristchurch, "Christchurch: " + C.phoneChristchurch);
       if (C.whatsapp) appendAssistantLink(bubble, "https://wa.me/" + C.whatsapp, "Message customer support on WhatsApp");
       bubble.appendChild(document.createElement("br"));
-      bubble.appendChild(document.createTextNode("Hours: " + C.hours + ". Kerala offices: " + C.addressMuvattupuzha + "; " + C.addressKannur + "."));
+      bubble.appendChild(document.createTextNode("Hours: " + C.hours + ". Offices: Australia — " + C.addressAustralia + "; Muvattupuzha — " + C.addressMuvattupuzha + "; Kannur — " + C.addressKannur + "; Christchurch — " + C.addressChristchurch + "."));
       messages.appendChild(bubble);
       messages.scrollTop = messages.scrollHeight;
     }

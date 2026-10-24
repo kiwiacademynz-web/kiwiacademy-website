@@ -13,13 +13,16 @@ edit it once and every page updates:
 ```js
 window.KNA = {
   whatsapp: "919656219376",   // digits only, country code first, no + or spaces
-  phoneAustralia: "+61450719376",
-  phoneIndia: "+919656219376",
+  phoneAustralia: "+6145071937",
+  phoneMuvattupuzha: "+918157919376",
+  phoneKannur: "+919656219376",
+  phoneChristchurch: "+642102019376",
   email: "info@dreamvisionedu.au",
   addressAustralia: "...",
   addressMuvattupuzha: "...",
   addressKannur: "...",
-  hours: "...",
+  addressChristchurch: "...",
+  hours: "Monday – Friday: 9:30 AM – 4:30 PM; Saturday: 9:30 AM – 1:00 PM",
   social: {
     facebook: "https://www.facebook.com/dreamvision",
     instagram: "https://www.instagram.com/dreamvision_education/",

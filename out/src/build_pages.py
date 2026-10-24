@@ -725,13 +725,16 @@ CONTACT_BODY = """<div class="section">
     <div>
       <h2>Get in touch</h2>
       <ul class="contact-list">
-        <li><span class="ic">{phone}</span><div><b>Australia</b><a data-phone-australia href="tel:+61450719376">+61 450 719 376</a></div></li>
-        <li><span class="ic">{phone}</span><div><b>India</b><a data-phone-india href="tel:+919656219376">+91 96562 19376</a></div></li>
+        <li><span class="ic">{phone}</span><div><b>Australia</b><a data-phone-australia href="tel:+6145071937">+61 450 719 37</a></div></li>
+        <li><span class="ic">{phone}</span><div><b>Muvattupuzha</b><a data-phone-muvattupuzha href="tel:+918157919376">+91 81579 19376</a></div></li>
+        <li><span class="ic">{phone}</span><div><b>Kannur</b><a data-phone-kannur href="tel:+919656219376">+91 96562 19376</a></div></li>
+        <li><span class="ic">{phone}</span><div><b>Christchurch</b><a data-phone-christchurch href="tel:+642102019376">+64 210 2019376</a></div></li>
         <li><span class="ic">{mail}</span><div><b>Email</b><a data-email data-email-text href="#">info@dreamvisionedu.au</a></div></li>
         <li><span class="ic">{pin}</span><div><b>Melbourne office</b><span data-address-australia>140 William Street Melbourne Victoria Australia</span></div></li>
         <li><span class="ic">{pin}</span><div><b>Muvattupuzha office</b><span data-address-muvattupuzha>First Floor, Jacob Tower, Post Office Junction, Muvattupuzha, Kerala 686661</span></div></li>
         <li><span class="ic">{pin}</span><div><b>Kannur office</b><span data-address-kannur>JHF Arcade, Pamban Madhavan Rd, Talap, Kannur, Keralam 670002, India</span></div></li>
-        <li><span class="ic">{clock}</span><div><b>Hours</b><span data-hours>Mon &ndash; Sat, 9:00 am &ndash; 6:00 pm IST</span></div></li>
+        <li><span class="ic">{pin}</span><div><b>Christchurch office</b><span data-address-christchurch>4 Ash Street, Christchurch City, Christchurch 8011, New Zealand</span></div></li>
+        <li><span class="ic">{clock}</span><div><b>Hours</b><span data-hours>Monday &ndash; Friday: 9:30 AM &ndash; 4:30 PM; Saturday: 9:30 AM &ndash; 1:00 PM</span></div></li>
       </ul>
       <div class="social" style="margin-top:2rem">
         <a data-social="instagram" href="#" aria-label="Instagram">{insta}</a>
