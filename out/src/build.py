@@ -97,7 +97,7 @@ def head(title, desc, base, canonical):
         "name": SITE_NAME,
         "url": "https://dreamvisionedu.au/",
         "email": "info@dreamvisionedu.au",
-        "telephone": "+6145071937",
+        "telephone": "+61450719376",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "140 William Street",
@@ -159,7 +159,7 @@ def header(base, current):
   <div class="wrap">
     <span class="topbar__tagline">Guiding Dreams, Building Global Futures</span>
     <div class="topbar__links">
-      <a data-phone-australia href="tel:+6145071937">+61 450 719 37</a>
+      <a data-phone-australia href="tel:+61450719376">+61 450 719 376</a>
       <a data-phone-kannur href="tel:+919656219376">+91 96562 19376</a>
       <a data-email data-email-text href="#">info@dreamvisionedu.au</a>
     </div>
@@ -236,7 +236,7 @@ def footer(base):
     <div>
       <h4>Get in touch</h4>
       <ul>
-        <li>{pin} <span data-address-australia>140 William Street Melbourne Victoria Australia</span><br>{phone} <a data-phone-australia href="tel:+6145071937">+61 450 719 37</a></li>
+        <li>{pin} <span data-address-australia>140 William Street Melbourne Victoria Australia</span><br>{phone} <a data-phone-australia href="tel:+61450719376">+61 450 719 376</a></li>
         <li>{pin} <span data-address-muvattupuzha>First Floor, Jacob Tower, Post Office Junction, Muvattupuzha, Kerala 686661</span><br>{phone} <a data-phone-muvattupuzha href="tel:+918157919376">+91 81579 19376</a></li>
         <li>{pin} <span data-address-kannur>JHF Arcade, Pamban Madhavan Rd, Talap, Kannur, Keralam 670002, India</span><br>{phone} <a data-phone-kannur href="tel:+919656219376">+91 96562 19376</a></li>
         <li>{pin} <span data-address-christchurch>4 Ash Street, Christchurch City, Christchurch 8011, New Zealand</span><br>{phone} <a data-phone-christchurch href="tel:+642102019376">+64 210 2019376</a></li>

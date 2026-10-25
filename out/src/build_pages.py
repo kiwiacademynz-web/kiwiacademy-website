@@ -725,7 +725,7 @@ CONTACT_BODY = """<div class="section">
     <div>
       <h2>Get in touch</h2>
       <ul class="contact-list">
-        <li><span class="ic">{phone}</span><div><b>Australia</b><a data-phone-australia href="tel:+6145071937">+61 450 719 37</a></div></li>
+        <li><span class="ic">{phone}</span><div><b>Australia</b><a data-phone-australia href="tel:+61450719376">+61 450 719 376</a></div></li>
         <li><span class="ic">{phone}</span><div><b>Muvattupuzha</b><a data-phone-muvattupuzha href="tel:+918157919376">+91 81579 19376</a></div></li>
         <li><span class="ic">{phone}</span><div><b>Kannur</b><a data-phone-kannur href="tel:+919656219376">+91 96562 19376</a></div></li>
         <li><span class="ic">{phone}</span><div><b>Christchurch</b><a data-phone-christchurch href="tel:+642102019376">+64 210 2019376</a></div></li>
