@@ -394,9 +394,11 @@ tbody th { font-weight: 700; color: var(--fiord); background: var(--mist); }
 .contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.25rem; }
 .contact-list li { display: flex; gap: 1rem; align-items: flex-start; max-width: none; }
 .contact-list .ic { width: 2.75rem; height: 2.75rem; border-radius: 12px; background: var(--pounamu-soft); color: var(--pounamu); display: grid; place-items: center; flex: none; }
-.contact-list li > div { min-width: 0; }
+.contact-list li > .contact-office { min-width: 0; display: flex; flex-direction: column; gap: .35rem; }
+.contact-list .contact-office__main { display: block; }
 .contact-list b { display: block; color: var(--fiord); }
 .contact-list a { color: var(--ink); overflow-wrap: anywhere; }
+.contact-list .contact-office__phone { display: inline-block; margin-top: .1rem; font-weight: 600; text-decoration: underline; text-underline-offset: .18em; }
 
 /* 8 — FORMS -------------------------------------------------------------- */
 .form { background: #fff; border: 1px solid var(--line); border-radius: var(--r-l); padding: clamp(1.25rem, 3vw, 2.25rem); box-shadow: var(--shadow); }
