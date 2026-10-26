@@ -7,6 +7,7 @@ window.KNA = {
   whatsapp: "919656219376",            // country code + number, digits only (no + or spaces)
   phoneAustralia: "+61450719376",
   phoneMuvattupuzha: "+918157919376",
+  phoneMuvattupuzhaSecondary: "+919562319376",
   phoneKannur: "+919656219376",
   phoneChristchurch: "+642102019376",
   email: "info@dreamvisionedu.au",

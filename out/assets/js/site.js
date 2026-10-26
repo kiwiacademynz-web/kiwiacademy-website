@@ -45,6 +45,28 @@
     });
     document.querySelectorAll("[data-phone-muvattupuzha]").forEach(function (el) {
       el.href = "tel:" + C.phoneMuvattupuzha;
+      if (!C.phoneMuvattupuzhaSecondary) return;
+      var following = el.nextElementSibling;
+      if (following && following.tagName === "BR") following = following.nextElementSibling;
+      var secondary = following &&
+        following.hasAttribute("data-phone-muvattupuzha-secondary") ? following : null;
+      if (!secondary) {
+        secondary = document.createElement("a");
+        secondary.setAttribute("data-phone-muvattupuzha-secondary", "");
+        if (el.classList.contains("contact-office__phone")) {
+          secondary.className = "contact-office__phone";
+        }
+        el.insertAdjacentElement("afterend", secondary);
+        if (!el.parentElement.classList.contains("contact-office") &&
+            (el.parentElement.tagName === "LI" || el.parentElement.tagName === "DIV")) {
+          el.insertAdjacentElement("afterend", document.createElement("br"));
+        }
+      }
+      secondary.href = "tel:" + C.phoneMuvattupuzhaSecondary;
+      secondary.textContent = C.phoneMuvattupuzhaSecondary.replace(
+        /^(\+\d{2})(\d{5})(\d{4})$/,
+        "$1 $2 $3"
+      );
     });
     document.querySelectorAll("[data-phone-kannur]").forEach(function (el) {
       el.href = "tel:" + C.phoneKannur;
