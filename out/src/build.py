@@ -85,17 +85,17 @@ def head(title, desc, base, canonical):
     canonical_path = canonical_path[:-10].rstrip("/")
   elif canonical_path.endswith(".html"):
     canonical_path = canonical_path[:-5]
-  canonical_url = "https://dreamvisionedu.au/" + canonical_path.lstrip("/")
+  canonical_url = "https://www.dreamvisionedu.au/" + canonical_path.lstrip("/")
   if not canonical_path:
-    canonical_url = "https://dreamvisionedu.au/"
+    canonical_url = "https://www.dreamvisionedu.au/"
   structured_data = json.dumps({
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "EducationalOrganization",
-        "@id": "https://dreamvisionedu.au/#organization",
+        "@id": "https://www.dreamvisionedu.au/#organization",
         "name": SITE_NAME,
-        "url": "https://dreamvisionedu.au/",
+        "url": "https://www.dreamvisionedu.au/",
         "email": "info@dreamvisionedu.au",
         "telephone": "+61450719376",
         "address": {
@@ -109,10 +109,10 @@ def head(title, desc, base, canonical):
       },
       {
         "@type": "WebSite",
-        "@id": "https://dreamvisionedu.au/#website",
-        "url": "https://dreamvisionedu.au/",
+        "@id": "https://www.dreamvisionedu.au/#website",
+        "url": "https://www.dreamvisionedu.au/",
         "name": SITE_NAME,
-        "publisher": {"@id": "https://dreamvisionedu.au/#organization"},
+        "publisher": {"@id": "https://www.dreamvisionedu.au/#organization"},
         "inLanguage": "en-AU",
       },
     ],

@@ -115,3 +115,20 @@ generate these HTML files with a consistent header/footer/nav. You don't need Py
 edit the site day-to-day — just edit the HTML/CSS/JS in `out/` directly
 like any static site. Only touch `src/` if you want to regenerate pages
 from templates instead of hand-editing HTML.
+
+## 7. Search crawling and breadcrumbs
+
+`robots.txt` allows Googlebot and references `sitemap.xml`. The sitemap,
+canonical links and structured page URLs use the `www.dreamvisionedu.au`
+host to match the live site's preferred host. Each page is set to
+`index,follow`.
+
+The shared `assets/js/site.js` script turns the page breadcrumb trail into
+accessible breadcrumb navigation and adds Schema.org `BreadcrumbList` data.
+The standalone `sitemap.html` page has its own static breadcrumb markup and
+structured data.
+
+After publishing site changes, check the affected page with Google Search
+Console's live URL test and submit or resubmit `https://www.dreamvisionedu.au/sitemap.xml`.
+Google controls when pages are recrawled and indexed; requesting indexing
+does not guarantee immediate inclusion in search results.

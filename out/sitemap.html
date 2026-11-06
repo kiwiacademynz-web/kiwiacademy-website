@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Website Sitemap | DREAMVISION Education</title>
   <meta name="description" content="Browse all DREAMVISION Education pages, courses and articles.">
-  <link rel="canonical" href="https://dreamvisionedu.au/sitemap.html">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.dreamvisionedu.au/sitemap">
   <meta name="theme-color" content="#172d49">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.dreamvisionedu.au/"},{"@type":"ListItem","position":2,"name":"Website sitemap","item":"https://www.dreamvisionedu.au/sitemap"}]}</script>
   <style>
     :root {
       color-scheme: light;
@@ -25,6 +27,10 @@
     .eyebrow { margin: 0 0 10px; color: #176b58; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     h1 { margin: 0 0 12px; font-size: clamp(2rem, 6vw, 3.25rem); line-height: 1.1; }
     .intro { max-width: 650px; margin: 0; color: #526174; font-size: 1.1rem; line-height: 1.65; }
+    .breadcrumbs { margin-bottom: 22px; color: #526174; font-size: .95rem; }
+    .breadcrumbs ol { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0; padding: 0; list-style: none; }
+    .breadcrumbs li + li::before { content: "/"; margin-right: .5rem; color: #7a8795; }
+    .breadcrumbs [aria-current="page"] { color: #172d49; }
     .groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 270px), 1fr)); gap: 18px; margin-top: 36px; }
     .group { padding: 24px; border: 1px solid #dce3eb; border-radius: 12px; background: #fff; }
     h2 { margin: 0 0 14px; font-size: 1.2rem; }
@@ -45,6 +51,12 @@
     <div class="wrap"><a class="brand" href="/">DREAMVISION EDUCATION</a></div>
   </header>
   <main class="wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Website sitemap</li>
+      </ol>
+    </nav>
     <p class="eyebrow">Explore our website</p>
     <h1>Website sitemap</h1>
     <p class="intro">Find the page you’re looking for. Browse our services, courses and learning resources below.</p>

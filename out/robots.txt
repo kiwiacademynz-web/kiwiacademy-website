@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
 User-agent: OAI-SearchBot
 Allow: /
 
@@ -13,4 +16,4 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://dreamvisionedu.au/sitemap.xml
+Sitemap: https://www.dreamvisionedu.au/sitemap.xml

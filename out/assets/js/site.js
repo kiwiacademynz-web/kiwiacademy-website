@@ -128,6 +128,119 @@
     });
   }
 
+  function wireBreadcrumbs() {
+    var main = document.querySelector("main#main");
+    if (!main) return;
+
+    var canonicalLink = document.querySelector('link[rel="canonical"]');
+    var currentUrl = canonicalLink ? canonicalLink.href : window.location.href;
+    var breadcrumb = main.querySelector(".crumbs");
+    var items = [];
+
+    function cleanUrl(value) {
+      var url = new URL(value, currentUrl);
+      url.search = "";
+      url.hash = "";
+      if (/\/index\.html$/i.test(url.pathname)) {
+        url.pathname = url.pathname.replace(/index\.html$/i, "");
+      } else {
+        url.pathname = url.pathname.replace(/\.html$/i, "");
+      }
+      if (!url.pathname) url.pathname = "/";
+      return url.href;
+    }
+
+    function addItem(name, url) {
+      if (!name) return;
+      items.push({ name: name, url: cleanUrl(url) });
+    }
+
+    if (breadcrumb) {
+      Array.prototype.forEach.call(breadcrumb.childNodes, function (node) {
+        var text = node.textContent.trim();
+        if (!text || text === "/") return;
+        if (node.nodeType === 1 && node.tagName === "A") {
+          addItem(text, node.href);
+        } else if (node.nodeType === 3 || (node.nodeType === 1 && node.tagName !== "SPAN")) {
+          addItem(text, currentUrl);
+        }
+      });
+    } else {
+      var pathSegments = new URL(currentUrl).pathname
+        .replace(/\/index\.html$/i, "")
+        .replace(/\.html$/i, "")
+        .split("/")
+        .filter(Boolean);
+      var heading = main.querySelector("h1");
+      var pageName = heading ? heading.textContent.trim() : document.title.split("|")[0].trim();
+
+      if (pathSegments.length) {
+        addItem("Home", new URL("/", currentUrl).href);
+        if (pathSegments.length > 1) {
+          var parentPath = pathSegments.slice(0, -1);
+          var parentName = parentPath[parentPath.length - 1]
+            .replace(/-/g, " ")
+            .replace(/\b\w/g, function (letter) { return letter.toUpperCase(); });
+          addItem(parentName, new URL("/" + parentPath.join("/"), currentUrl).href);
+        }
+        addItem(pageName, currentUrl);
+      } else {
+        addItem("Home", currentUrl);
+      }
+
+      breadcrumb = document.createElement("nav");
+      breadcrumb.className = "crumbs crumbs--standalone";
+      breadcrumb.setAttribute("aria-label", "Breadcrumb");
+      main.insertBefore(breadcrumb, main.firstChild);
+    }
+
+    if (!items.length) return;
+
+    var nav = breadcrumb.tagName === "NAV" ? breadcrumb : document.createElement("nav");
+    nav.className = breadcrumb.className;
+    nav.setAttribute("aria-label", "Breadcrumb");
+    var list = document.createElement("ol");
+
+    items.forEach(function (item, index) {
+      var listItem = document.createElement("li");
+      if (index === items.length - 1) {
+        listItem.setAttribute("aria-current", "page");
+        listItem.textContent = item.name;
+      } else {
+        var link = document.createElement("a");
+        link.href = item.url;
+        link.textContent = item.name;
+        listItem.appendChild(link);
+      }
+      list.appendChild(listItem);
+    });
+
+    nav.replaceChildren(list);
+    if (nav !== breadcrumb) breadcrumb.replaceWith(nav);
+
+    var hasBreadcrumbSchema = Array.prototype.some.call(
+      document.querySelectorAll('script[type="application/ld+json"]'),
+      function (script) { return script.textContent.indexOf("BreadcrumbList") !== -1; }
+    );
+    if (!hasBreadcrumbSchema) {
+      var schema = document.createElement("script");
+      schema.type = "application/ld+json";
+      schema.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": items.map(function (item, index) {
+          return {
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": item.name,
+            "item": item.url
+          };
+        })
+      });
+      document.head.appendChild(schema);
+    }
+  }
+
   /* ---- pathway chooser (home page) ---- */
   function wireChooser() {
     var root = document.querySelector("[data-chooser]");
@@ -565,6 +678,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     wireContactLinks();
     wireNav();
+    wireBreadcrumbs();
     wireChooser();
     wireChecker();
     wireForms();

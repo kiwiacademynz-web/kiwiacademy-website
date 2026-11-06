@@ -222,9 +222,15 @@ strong { font-weight: 700; }
 .page-hero h1 { color: #fff; font-size: clamp(2.1rem, 1.3rem + 3vw, 3.5rem); max-width: 22ch; margin-bottom: .4em; }
 .page-hero .lead { color: #d2deea; }
 .crumbs { font-size: .9rem; margin-bottom: 1.25rem; color: #b7c7d9; }
+.crumbs ol { display: flex; flex-wrap: wrap; gap: .45rem; list-style: none; margin: 0; padding: 0; }
+.crumbs li + li::before { content: "/"; margin-right: .45rem; opacity: .6; }
+.crumbs li { max-width: none; }
 .crumbs a { color: #e9eff6; }
 .crumbs a:hover { color: var(--kowhai); }
 .crumbs span { margin-inline: .45rem; opacity: .6; }
+.crumbs--standalone { width: min(1180px, 100% - 2.5rem); margin: 1rem auto; color: var(--muted); }
+.crumbs--standalone a { color: var(--pounamu); }
+.crumbs--standalone a:hover { color: var(--fiord); }
 .page-hero__meta { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; padding: 0; list-style: none; }
 .page-hero__meta li { background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .18); padding: .35rem .85rem; border-radius: 999px; font-size: .9rem; color: #fff; max-width: none; }
 
