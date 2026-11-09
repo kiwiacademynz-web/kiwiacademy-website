@@ -1,5 +1,17 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "outputDirectory": "out"
+  "outputDirectory": "out",
+  "redirects": [
+    {
+      "source": "/uk-nz-au",
+      "destination": "/#services",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/#services",
+      "permanent": true
+    }
+  ]
 }
