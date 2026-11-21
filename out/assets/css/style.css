@@ -543,7 +543,7 @@ input:user-invalid, select:user-invalid { border-color: var(--pohutukawa); }
 }
 .topo.hero .hero__grid { width: min(1180px, 100% - 2.5rem); grid-template-columns: 1fr; padding-block: clamp(3rem, 6vh, 4.5rem); margin-inline: auto; }
 .topo.hero .hero__grid > div:first-child { width: min(100%, 46rem); }
-.topo.hero h1 { max-width: 12ch; font-size: 4.5rem; }
+.topo.hero h1 { max-width: 20ch; font-size: 4.5rem; }
 .topo.hero .lead { max-width: 39rem; color: #f1f4f5; }
 .topo.hero .hero__proof { max-width: 39rem; padding: 0; }
 .topo.hero .hero__proof li { position: relative; padding-left: 1.35rem; }
@@ -567,6 +567,33 @@ input:user-invalid, select:user-invalid { border-color: var(--pohutukawa); }
 .service-card h3 { margin: 1.15rem 0 .5rem; font-size: 1.25rem; }
 .service-card p { color: var(--muted); font-size: 1rem; margin-bottom: 1.25rem; }
 .service-card__link { display: flex; justify-content: space-between; gap: .75rem; margin-top: auto; color: var(--pounamu); font-size: .93rem; font-weight: 700; }
+.nursing-training .section-head { max-width: 48rem; }
+.nursing-training__image { width: calc(100% + 3rem); height: 12rem; margin: -1.5rem -1.5rem 1.25rem; object-fit: cover; }
+.nursing-training__card { min-height: 28rem; }
+.nursing-training__locations { max-width: none; margin: 1.5rem 0 0; color: var(--muted); text-align: center; }
+.nursing-training__locations strong { color: var(--fiord); }
+.nursing-training__locations a { display: inline-block; margin-inline: .25rem; }
+.nursing-pathway .section-head { max-width: 48rem; margin-inline: auto; text-align: center; }
+.nursing-pathway__steps { max-width: 52rem; margin: 0 auto 1.5rem; padding: 0; list-style: none; }
+.nursing-pathway__steps > li { position: relative; max-width: none; padding-bottom: 2.5rem; }
+.nursing-pathway__steps > li:last-child { padding-bottom: 0; }
+.nursing-pathway__steps > li:not(:last-child)::after { content: "\2193"; position: absolute; bottom: .4rem; left: 50%; transform: translateX(-50%); color: var(--pounamu); font-size: 1.25rem; line-height: 1; }
+.nursing-pathway__step { overflow: hidden; border: 1px solid var(--line); border-radius: var(--r-m); background: #fff; box-shadow: 0 1px 2px rgba(13, 29, 51, .06); }
+.nursing-pathway__step[open] { border-color: var(--pounamu); }
+.nursing-pathway__summary { display: grid; grid-template-columns: 3rem minmax(0, 1fr) 1rem; align-items: center; gap: 1rem; padding: 1rem 1.25rem; cursor: pointer; list-style: none; }
+.nursing-pathway__summary::-webkit-details-marker { display: none; }
+.nursing-pathway__number { display: grid; width: 3rem; aspect-ratio: 1; place-items: center; border-radius: 50%; background: var(--fiord); color: #fff; font: 800 1rem var(--font-display); }
+.nursing-pathway__heading { display: block; min-width: 0; }
+.nursing-pathway__label { display: block; color: var(--pounamu); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.nursing-pathway__heading strong { display: block; color: var(--fiord); font: 700 1.1rem/1.35 var(--font-display); }
+.nursing-pathway__subtitle { display: block; color: var(--muted); font-size: .95rem; }
+.nursing-pathway__toggle { width: .65rem; aspect-ratio: 1; border-right: 2px solid var(--pounamu); border-bottom: 2px solid var(--pounamu); transform: rotate(45deg); }
+.nursing-pathway__step[open] .nursing-pathway__toggle { transform: rotate(225deg); }
+.nursing-pathway__detail { padding: 0 1.25rem 1.25rem 5.25rem; }
+.nursing-pathway__detail p { margin-bottom: .85rem; }
+.nursing-pathway__links { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; }
+.nursing-pathway__note { max-width: 58rem; margin: 0 auto; color: var(--muted); text-align: center; }
+.nursing-pathway__cta { margin-top: 1.25rem; text-align: center; }
 .approach-list { margin: 0; }
 .approach-list > div { padding: 1.15rem 0; border-top: 1px solid var(--line); }
 .approach-list dt { color: var(--fiord); font: 700 1.15rem var(--font-display); }
@@ -589,9 +616,13 @@ input:user-invalid, select:user-invalid { border-color: var(--pohutukawa); }
 @media (max-width: 620px) {
   .topo.hero { min-height: 600px; background-position: 58% center; background-image: linear-gradient(90deg, rgba(13, 29, 51, .9), rgba(13, 29, 51, .58)), url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=85"); }
   .topo.hero .hero__grid { padding-block: 3.5rem; }
-  .topo.hero h1 { font-size: 2.8rem; }
+  .topo.hero h1 { max-width: 20ch; font-size: 2.8rem; }
   .service-grid { grid-template-columns: 1fr; }
   .service-card { min-height: 0; }
+  .nursing-training__card { min-height: 0; }
+  .nursing-pathway__summary { grid-template-columns: 2.5rem minmax(0, 1fr) .85rem; gap: .75rem; padding: .9rem; }
+  .nursing-pathway__number { width: 2.5rem; }
+  .nursing-pathway__detail { padding: 0 .9rem 1rem 4.15rem; }
   .metrics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .metric { border-bottom: 1px solid var(--line); }
   .metric:nth-child(2) { border-right: 0; }
