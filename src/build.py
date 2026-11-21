@@ -94,17 +94,11 @@ def head(title, desc, base, canonical):
       {
         "@type": "EducationalOrganization",
         "@id": "https://www.dreamvisionedu.au/#organization",
-        "name": SITE_NAME,
+        "name": "DREAMVISION Education",
+        "alternateName": SITE_NAME,
         "url": "https://www.dreamvisionedu.au/",
         "email": "info@dreamvisionedu.au",
         "telephone": "+61450719376",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "140 William Street",
-          "addressLocality": "Melbourne",
-          "addressRegion": "Victoria",
-          "addressCountry": "AU",
-        },
         "areaServed": ["India", "New Zealand", "Australia"],
       },
       {

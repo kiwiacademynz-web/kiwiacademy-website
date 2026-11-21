@@ -1,14 +1,14 @@
 # DREAMVISION — website
 
-Plain HTML / CSS / JS. No build step, no framework — open any `.html` file
-directly, or better, serve the folder with VS Code's **Live Server**
-extension so relative links behave exactly like they will once hosted.
+Plain HTML / CSS / JS. The deployable website is in `out/`. Serve that folder
+with VS Code's **Live Server** extension so relative links behave as they do
+when hosted.
 
 ## 1. Edit your contact details in ONE place
 
-Open `assets/js/config.js`. Every phone number, WhatsApp link, email,
-address and social link on the entire site is pulled from this file —
-edit it once and every page updates:
+Open `out/assets/js/config.js`. Phone numbers, WhatsApp links, email,
+addresses and social links are pulled from this file — edit it once and every
+page updates:
 
 ```js
 window.KNA = {
@@ -32,50 +32,40 @@ window.KNA = {
 };
 ```
 
+Verify business addresses, hours and social profiles before relying on them
+for local SEO or publishing them as official contact details.
+
 ## 2. Folder structure
 
 ```
-index.html                 Home
-about.html
-career.html
-faq.html
-contact.html
-blog.html                   Blog index
-study-in-new-zealand.html
-pre-arrival-services.html
-nz-nursing-registration.html
-au-nursing-registration.html
-vidyarambha-offer.html
-blog/
-  ncnz-competence-pathway-explained.html
-  oet-vs-ielts-for-nurses.html
-  what-happens-at-the-osce.html
-courses/
-  index.html                 Compare all 4 courses
-  iqn-training.html
-  osce-training.html
-  oet-preparation.html        (has the interactive OET/IELTS score checker)
-best-oet-training-in-kerala.html
-best-iqn-training-in-kerala.html
-best-osce-training-in-kerala.html
-best-nclex-rn-training-in-kerala.html
-assets/
-  css/style.css              Single stylesheet, everything is in here
-  js/config.js                Your contact details (edit this)
-  js/site.js                  Nav, forms, score checker and website assistant
-  img/topo.svg, logo/logo.png, favicon/*
+README.md
+src/                         Development helper scripts
+out/                         Deployable static site
+  index.html
+  about.html
+  career.html
+  faq.html
+  contact.html
+  blog.html
+  blog/                      Nursing pathway articles
+  courses/                   Course details and score checker
+  assets/
+    css/style.css
+    js/config.js              Contact details
+    js/site.js                Navigation, forms and website assistant
+    img/
 ```
 
-## 3. Things clearly marked as placeholders — replace before launch
+## 3. Trust and business evidence
 
-Search the site for these and swap in real content:
+The About page describes service areas rather than inventing staff biographies.
+The homepage does not show unsupported numeric impact claims. Add trainer
+profiles, student outcomes or business metrics only when the details are
+verified and any required consent is in place.
 
-- **Team photos & bios** — `about.html`, the "Meet the team" section
-- **Testimonials** — `index.html`, the "What candidates say" section
-- **Fees** — `faq.html`, the "Fees & logistics" group
-- **Job openings** — `career.html`
-- **Addresses** — Australia, Muvattupuzha and Kannur in `config.js`
-- **Social links** — real Instagram/Facebook/YouTube/LinkedIn URLs in `config.js`
+The Careers page lists no current openings. Confirm office addresses, hours
+and social profiles in `out/assets/js/config.js` before using them for local
+profiles or citations.
 
 ## 4. Enquiry forms and website assistant
 
@@ -84,7 +74,7 @@ pre-filled. The visitor must tap **Send** in WhatsApp; the website cannot
 send a WhatsApp message silently.
 
 The floating website assistant gives conversational preset answers from
-`assets/js/site.js` about courses, exam pathways, AHPRA, fees and contact
+`out/assets/js/site.js` about courses, exam pathways, AHPRA, fees and contact
 options. It uses a warm tone but identifies itself as a virtual assistant. It
 does not collect enquiry details or send messages. Questions outside the
 assistant's covered topics are directed to customer support.
@@ -99,22 +89,18 @@ choices in browser local storage. Necessary storage is always enabled. No
 analytics or course-information tracking scripts are currently included; any
 such integrations must check the saved choice before loading.
 
-The home page impact metrics count up when they become visible. Visitors who
-prefer reduced motion see the final values without the animation.
-
 ## 5. Colours & fonts, if you want to adjust the look
 
 All design tokens (colours, fonts, spacing) are CSS variables at the very
-top of `assets/css/style.css`, under `:root`. Change a value there and it
+top of `out/assets/css/style.css`, under `:root`. Change a value there and it
 updates sitewide.
 
-## 6. `src/` folder (not part of the live site)
+## 6. Development scripts
 
-`src/build.py` and `src/build_pages.py` are the Python scripts used to
-generate these HTML files with a consistent header/footer/nav. You don't need Python to
-edit the site day-to-day — just edit the HTML/CSS/JS in `out/` directly
-like any static site. Only touch `src/` if you want to regenerate pages
-from templates instead of hand-editing HTML.
+`src/build.py` and `src/build_pages.py` are legacy development helpers. They
+do not include every current landing page and site change, so do not use them
+to regenerate the production site until they have been synchronized with
+`out/`. The current deployment serves the static files in `out/` directly.
 
 ## 7. Search crawling and breadcrumbs
 
@@ -123,7 +109,7 @@ canonical links and structured page URLs use the `www.dreamvisionedu.au`
 host to match the live site's preferred host. Each page is set to
 `index,follow`.
 
-The shared `assets/js/site.js` script turns the page breadcrumb trail into
+The shared `out/assets/js/site.js` script turns the page breadcrumb trail into
 accessible breadcrumb navigation and adds Schema.org `BreadcrumbList` data.
 The standalone `sitemap.html` page has its own static breadcrumb markup and
 structured data.

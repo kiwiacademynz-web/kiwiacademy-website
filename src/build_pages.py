@@ -213,16 +213,18 @@ HOME_METHOD = """<div class="topo section section--fiord">
 
 HOME_STORIES = ""
 
-HOME_METRICS = """<section class="section metrics-section" aria-labelledby="metrics-title">
+HOME_METRICS = """<section class="section section--mist" aria-labelledby="preparation-options-title">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">DREAMVISION impact</p>
-      <h2 id="metrics-title">Guidance trusted by students and professionals.</h2>
+      <p class="eyebrow">Practical exam preparation</p>
+      <h2 id="preparation-options-title">Clear support for your destination and exam.</h2>
+      <p>Training supports preparation; the relevant regulator determines eligibility, assessment requirements and registration outcomes.</p>
     </div>
-    <dl class="metrics-grid">
-      <div class="metric"><dt data-count="1500" data-count-suffix="+">1500+</dt><dd>Satisfied customers</dd></div>
-      <div class="metric"><dt data-count="250" data-count-suffix="+">250+</dt><dd>Student visas</dd></div>
-      <div class="metric"><dt data-count="99.9" data-count-suffix="%" data-count-decimals="1">99.9%</dt><dd>Satisfaction</dd></div>
+    <dl class="facts">
+      <div><dt><a href="osce-training-in-australia.html">Australian OSCE training</a></dt><dd>Clinical practice, simulated stations and mock scenarios in Australia. Contact us to confirm current venue and schedule.</dd></div>
+      <div><dt><a href="best-osce-training-in-kerala.html">New Zealand OSCE preparation</a></dt><dd>NCNZ-focused preparation for nurses directed to the New Zealand clinical competence assessment.</dd></div>
+      <div><dt><a href="courses/iqn-training.html">IQN exam preparation</a></dt><dd>Online preparation for the NCNZ theoretical examination, including timed mock practice.</dd></div>
+      <div><dt><a href="courses/oet-preparation.html">OET and IELTS preparation</a></dt><dd>Nursing-focused English preparation with a score self-check and one-to-one learning options.</dd></div>
     </dl>
   </div>
 </section>"""
@@ -643,7 +645,7 @@ CAREER_WHY = """<div class="section section--mist">
 
 CAREER_APPLY = """<div class="section">
   <div class="wrap wrap--narrow">
-    <div class="section-head"><h2>Don't see the right role?</h2><p>Send your CV and a line about what you'd want to teach or run &mdash; we keep every application on file for the next batch we open hiring for.</p></div>
+    <div class="section-head"><h2>Don't see the right role?</h2><p>Use the contact form to share a brief introduction and the type of work you're interested in. Submitting opens WhatsApp so you can review the message before sending.</p></div>
     <form class="form" data-enquiry>
       <div class="form__grid">
         <div class="field"><label for="c-name">Full name</label><input id="c-name" name="name" required></div>
@@ -678,7 +680,7 @@ FAQ_HERO = page_hero(
 FAQ_GENERAL = accordion([
     ("What is NCNZ's current process for internationally qualified nurses?", "Since December 2023, the Nursing Council of New Zealand directly assesses competence rather than relying mainly on paperwork. If you're directed to a competence assessment, you'll need to pass an online theoretical exam, then a 2-day orientation and preparation course followed by an OSCE, both taken in person in New Zealand."),
     ("Do all internationally qualified nurses need to sit these exams?", "Not necessarily &mdash; NCNZ decides whether you're directed to a competence assessment after reviewing your application. We can help you understand what's likely in your case on a free call."),
-    ("How long does the whole pathway usually take?", "It varies a lot by starting point, but most candidates move from enrolling with us to sitting their OSCE within 6&ndash;12 months, assuming steady study and no major delays on the NCNZ side."),
+    ("How long does the whole pathway usually take?", "Timing varies with your documents, regulator assessment, exam preparation and available test dates. Check current processing estimates with NCNZ and allow extra time for steps outside DREAMVISION's control."),
 ], "General pathway")
 
 FAQ_OET = accordion([
@@ -695,7 +697,7 @@ FAQ_IQN = accordion([
 
 FAQ_OSCE = accordion([
     ("Where is the OSCE held?", "At an accredited clinical simulation and assessment centre in Christchurch, following a 2-day orientation and preparation course held nearby."),
-    ("Can I prepare for the OSCE without travelling to New Zealand first?", "Yes — all our simulation-lab preparation happens at our Kerala centre. The orientation course and OSCE itself must be attended in New Zealand in person."),
+    ("Can I prepare for the NCNZ OSCE before travelling to New Zealand?", "Yes. Preparation can be arranged before travel; contact DREAMVISION to confirm the current location, format and schedule. The official NCNZ orientation course and OSCE must be attended in New Zealand in person."),
     ("How long is the actual OSCE exam?", "Around three hours, made up of multiple timed clinical stations."),
 ], "OSCE Training")
 
