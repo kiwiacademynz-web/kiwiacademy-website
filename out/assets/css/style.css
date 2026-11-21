@@ -568,11 +568,19 @@ input:user-invalid, select:user-invalid { border-color: var(--pohutukawa); }
 .service-card p { color: var(--muted); font-size: 1rem; margin-bottom: 1.25rem; }
 .service-card__link { display: flex; justify-content: space-between; gap: .75rem; margin-top: auto; color: var(--pounamu); font-size: .93rem; font-weight: 700; }
 .nursing-training .section-head { max-width: 48rem; }
-.nursing-training__image { width: calc(100% + 3rem); height: 12rem; margin: -1.5rem -1.5rem 1.25rem; object-fit: cover; }
+.nursing-training__image { display: block; width: calc(100% + 3rem); max-width: none; height: 12rem; margin: -1.5rem -1.5rem 1.25rem; object-fit: cover; }
 .nursing-training__card { min-height: 28rem; }
-.nursing-training__locations { max-width: none; margin: 1.5rem 0 0; color: var(--muted); text-align: center; }
-.nursing-training__locations strong { color: var(--fiord); }
-.nursing-training__locations a { display: inline-block; margin-inline: .25rem; }
+.nursing-training__pathways {
+  display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center;
+  gap: clamp(1.5rem, 4vw, 3rem); margin-top: 2rem; padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line); border-radius: var(--r-l);
+  background: linear-gradient(120deg, var(--mist), #fff 62%); box-shadow: 0 12px 28px rgba(13, 29, 51, .06);
+}
+.nursing-training__pathways-copy .eyebrow { margin-bottom: .45rem; }
+.nursing-training__pathways-copy h3 { margin: 0 0 .5rem; color: var(--fiord); font-size: clamp(1.3rem, 1.1rem + .8vw, 1.7rem); }
+.nursing-training__pathways-copy p:last-child { margin-bottom: 0; color: var(--muted); }
+.nursing-training__pathways-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+.nursing-training__pathways-links .btn { width: 100%; min-width: 0; padding: .65rem 1rem; }
 .nursing-pathway .section-head { max-width: 48rem; margin-inline: auto; text-align: center; }
 .nursing-pathway__steps { max-width: 52rem; margin: 0 auto 1.5rem; padding: 0; list-style: none; }
 .nursing-pathway__steps > li { position: relative; max-width: none; padding-bottom: 2.5rem; }
@@ -620,6 +628,8 @@ input:user-invalid, select:user-invalid { border-color: var(--pohutukawa); }
   .service-grid { grid-template-columns: 1fr; }
   .service-card { min-height: 0; }
   .nursing-training__card { min-height: 0; }
+  .nursing-training__pathways { grid-template-columns: 1fr; gap: 1.25rem; }
+  .nursing-training__pathways-links { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .nursing-pathway__summary { grid-template-columns: 2.5rem minmax(0, 1fr) .85rem; gap: .75rem; padding: .9rem; }
   .nursing-pathway__number { width: 2.5rem; }
   .nursing-pathway__detail { padding: 0 .9rem 1rem 4.15rem; }
@@ -630,6 +640,9 @@ input:user-invalid, select:user-invalid { border-color: var(--pohutukawa); }
   .metric:nth-child(3) { padding-left: 0; }
   .app-launch__grid { grid-template-columns: 1fr; }
   .app-launch__mark { width: min(72vw, 16rem); }
+}
+@media (max-width: 400px) {
+  .nursing-training__pathways-links { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   .reveal-visible { transition: none; }
