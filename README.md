@@ -85,9 +85,10 @@ aligned with the current site and official regulator information when updating
 course requirements.
 
 The site-wide cookie banner saves necessary, analytics and course-information
-choices in browser local storage. Necessary storage is always enabled. No
-analytics or course-information tracking scripts are currently included; any
-such integrations must check the saved choice before loading.
+choices in browser local storage. Necessary storage is always enabled. The
+Google Tag Manager container (`GTM-T6Q4XT9T`) is included on every page, but
+its script loads only when analytics consent is enabled. Configure any tags
+inside the container to respect the visitor's saved consent choices.
 
 ## 5. Colours & fonts, if you want to adjust the look
 

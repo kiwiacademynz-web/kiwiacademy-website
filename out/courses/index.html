@@ -1,6 +1,29 @@
 <!doctype html>
 <html lang="en-AU">
 <head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){window.dataLayer.push(arguments);}
+  gtag('js', new Date());
+  (function () {
+    var consentKey = 'dreamvision-cookie-consent-v1';
+    function loadGoogleTag() {
+      if (window.googleTagManagerLoaded) return;
+      window.googleTagManagerLoaded = true;
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-T6Q4XT9T';
+      document.head.appendChild(script);
+    }
+    window.addEventListener('dreamvision:analytics-consent', loadGoogleTag);
+    try {
+      var consent = JSON.parse(window.localStorage.getItem(consentKey) || 'null');
+      if (consent && consent.analytics === true) loadGoogleTag();
+    } catch (error) {
+      console.warn('Google tag was not loaded because cookie preferences could not be read.', error);
+    }
+  })();
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nursing Exam Courses in Kerala | OET, IQN, OSCE &amp; NCLEX-RN</title>

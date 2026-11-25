@@ -638,6 +638,9 @@
         }
         consent = selection;
         banner.remove();
+        if (selection.analytics) {
+          window.dispatchEvent(new Event("dreamvision:analytics-consent"));
+        }
       }
 
       banner.querySelector("[data-cookie-accept]").addEventListener("click", function () {
